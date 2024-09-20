@@ -1,0 +1,5 @@
+1: Defualt/Starting Room
+cEgo.ChangeRoom(3, 122, 558, eDirectionLeft);
+}
+
+cEgo.ChangeRoom(2, 273, 153, eDirectionLeft);
