@@ -38,12 +38,12 @@
       <EnforceObjectBasedScript>True</EnforceObjectBasedScript>
       <GUIAlphaStyle>MultiplyTranslucenceSrcBlend</GUIAlphaStyle>
       <GUIDAsString>{d8e8a6b0-2f65-4711-8d3a-0bfb9168936f}</GUIDAsString>
-      <GameFileName xml:space="preserve">Cosmic Drift</GameFileName>
-      <GameName xml:space="preserve">Cosmic Drift</GameName>
+      <GameFileName xml:space="preserve">Comic Drift</GameFileName>
+      <GameName xml:space="preserve">Comic Drift</GameName>
       <GameTextEncoding>utf-8</GameTextEncoding>
       <Genre>Adventure</Genre>
       <GlobalSpeechAnimationDelay>5</GlobalSpeechAnimationDelay>
-      <HandleInvClicksInScript>False</HandleInvClicksInScript>
+      <HandleInvClicksInScript>True</HandleInvClicksInScript>
       <InventoryCursors>True</InventoryCursors>
       <InventoryHotspotMarkerCrosshairColor>5</InventoryHotspotMarkerCrosshairColor>
       <InventoryHotspotMarkerDotColor>6</InventoryHotspotMarkerDotColor>
@@ -62,7 +62,7 @@
       <RoomTransition>FadeOutAndIn</RoomTransition>
       <RunGameLoopsWhileDialogOptionsDisplayed>False</RunGameLoopsWhileDialogOptionsDisplayed>
       <SaveGameFileExtension />
-      <SaveGameFolderName xml:space="preserve">Cosmic Drift</SaveGameFolderName>
+      <SaveGameFolderName xml:space="preserve">Comic Drift</SaveGameFolderName>
       <SaveScreenshots>False</SaveScreenshots>
       <ScaleCharacterSpriteOffsets>True</ScaleCharacterSpriteOffsets>
       <ScaleMovementSpeedWithMaskResolution>False</ScaleMovementSpeedWithMaskResolution>
@@ -653,7 +653,7 @@
         <SubFolders />
         <UnloadedRooms>
           <UnloadedRoom>
-            <Description xml:space="preserve">Defualt/Starting Room</Description>
+            <Description xml:space="preserve">Title Screen</Description>
             <Number>1</Number>
           </UnloadedRoom>
           <UnloadedRoom>
