@@ -661,7 +661,7 @@
             <Number>2</Number>
           </UnloadedRoom>
           <UnloadedRoom>
-            <Description xml:space="preserve">Space Bedroom</Description>
+            <Description xml:space="preserve">Spaceship Corridor </Description>
             <Number>3</Number>
           </UnloadedRoom>
           <UnloadedRoom>
@@ -2532,15 +2532,15 @@
             <MovementSpeedY>0</MovementSpeedY>
             <NormalView>1</NormalView>
             <Properties />
-            <RealName>Roger</RealName>
-            <ScriptName>cEgo</ScriptName>
+            <RealName>Zeno</RealName>
+            <ScriptName>cZeno</ScriptName>
             <Solid>True</Solid>
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
             <SpeechColor>12</SpeechColor>
             <SpeechView>0</SpeechView>
-            <StartX>165</StartX>
-            <StartY>165</StartY>
-            <StartingRoom>7</StartingRoom>
+            <StartX>40</StartX>
+            <StartY>170</StartY>
+            <StartingRoom>2</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>True</TurnBeforeWalking>
             <UniformMovementSpeed>True</UniformMovementSpeed>
@@ -5550,6 +5550,16 @@ stop
                         </Frames>
                       </Loop>
                     </Loops>
+                  </View>
+                </Views>
+              </ViewFolder>
+              <ViewFolder Name="Spaceship Room Door">
+                <SubFolders />
+                <Views>
+                  <View>
+                    <ID>7</ID>
+                    <Name>ShipSpace_Door</Name>
+                    <Loops />
                   </View>
                 </Views>
               </ViewFolder>
