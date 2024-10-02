@@ -1,1 +1,1 @@
-var gamefiles = ['A01_ Make_a_Thing_Do_a_Thing.ags', 'acsetup.cfg'];
+var gamefiles = ['audio.vox', 'Comic Drift.ags', 'acsetup.cfg'];
