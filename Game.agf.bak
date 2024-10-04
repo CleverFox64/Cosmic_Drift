@@ -650,27 +650,39 @@
     <Plugins />
     <Rooms>
       <UnloadedRoomFolder Name="Main">
-        <SubFolders />
+        <SubFolders>
+          <UnloadedRoomFolder Name="Spaceship">
+            <SubFolders>
+              <UnloadedRoomFolder Name="Personal Rooms">
+                <SubFolders />
+                <UnloadedRooms>
+                  <UnloadedRoom>
+                    <Description xml:space="preserve">Zeno's Room</Description>
+                    <Number>2</Number>
+                  </UnloadedRoom>
+                  <UnloadedRoom>
+                    <Description xml:space="preserve">Ana's Room</Description>
+                    <Number>5</Number>
+                  </UnloadedRoom>
+                </UnloadedRooms>
+              </UnloadedRoomFolder>
+            </SubFolders>
+            <UnloadedRooms>
+              <UnloadedRoom>
+                <Description xml:space="preserve">Spaceship Corridor </Description>
+                <Number>3</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description xml:space="preserve">Spaceship Cockpit</Description>
+                <Number>4</Number>
+              </UnloadedRoom>
+            </UnloadedRooms>
+          </UnloadedRoomFolder>
+        </SubFolders>
         <UnloadedRooms>
           <UnloadedRoom>
             <Description xml:space="preserve">Title Screen</Description>
             <Number>1</Number>
-          </UnloadedRoom>
-          <UnloadedRoom>
-            <Description xml:space="preserve">Zeno's Room</Description>
-            <Number>2</Number>
-          </UnloadedRoom>
-          <UnloadedRoom>
-            <Description xml:space="preserve">Spaceship Corridor </Description>
-            <Number>3</Number>
-          </UnloadedRoom>
-          <UnloadedRoom>
-            <Description xml:space="preserve">Spaceship Cockpit</Description>
-            <Number>4</Number>
-          </UnloadedRoom>
-          <UnloadedRoom>
-            <Description>Desert</Description>
-            <Number>5</Number>
           </UnloadedRoom>
           <UnloadedRoom>
             <Description xml:space="preserve">Ice Cave Podium</Description>
@@ -2536,10 +2548,10 @@
             <ScriptName>cZeno</ScriptName>
             <Solid>True</Solid>
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
-            <SpeechColor>12</SpeechColor>
+            <SpeechColor>1055</SpeechColor>
             <SpeechView>0</SpeechView>
-            <StartX>40</StartX>
-            <StartY>170</StartY>
+            <StartX>63</StartX>
+            <StartY>168</StartY>
             <StartingRoom>2</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>True</TurnBeforeWalking>
@@ -2574,15 +2586,15 @@
             <MovementSpeedY>0</MovementSpeedY>
             <NormalView>2</NormalView>
             <Properties />
-            <RealName>Bgo</RealName>
-            <ScriptName>cBgo</ScriptName>
+            <RealName>Joel</RealName>
+            <ScriptName>cJoel</ScriptName>
             <Solid>True</Solid>
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
-            <SpeechColor>11</SpeechColor>
+            <SpeechColor>34800</SpeechColor>
             <SpeechView>0</SpeechView>
-            <StartX>107</StartX>
-            <StartY>141</StartY>
-            <StartingRoom>1</StartingRoom>
+            <StartX>156</StartX>
+            <StartY>117</StartY>
+            <StartingRoom>3</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>True</TurnBeforeWalking>
             <UniformMovementSpeed>True</UniformMovementSpeed>
@@ -2591,8 +2603,8 @@
             <Interactions>
               <Event Index="0" />
               <Event Index="1" />
-              <Event Index="2">cBgo_Talk</Event>
-              <Event Index="3">cBgo_UseInv</Event>
+              <Event Index="2">cJoel_Talk</Event>
+              <Event Index="3" />
               <Event Index="4" />
               <Event Index="5" />
               <Event Index="6" />
@@ -2616,14 +2628,14 @@
             <MovementSpeedY>0</MovementSpeedY>
             <NormalView>4</NormalView>
             <Properties />
-            <RealName>Mike</RealName>
-            <ScriptName>cMike</ScriptName>
+            <RealName>Tyler</RealName>
+            <ScriptName>cTyler</ScriptName>
             <Solid>True</Solid>
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
-            <SpeechColor>64520</SpeechColor>
+            <SpeechColor>65504</SpeechColor>
             <SpeechView>0</SpeechView>
-            <StartX>68</StartX>
-            <StartY>162</StartY>
+            <StartX>247</StartX>
+            <StartY>137</StartY>
             <StartingRoom>5</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>True</TurnBeforeWalking>
@@ -2658,15 +2670,57 @@
             <MovementSpeedY>0</MovementSpeedY>
             <NormalView>2</NormalView>
             <Properties />
-            <RealName>Dave</RealName>
-            <ScriptName>oDave</ScriptName>
+            <RealName>Ana</RealName>
+            <ScriptName>cAna</ScriptName>
             <Solid>True</Solid>
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
-            <SpeechColor>12</SpeechColor>
+            <SpeechColor>33823</SpeechColor>
             <SpeechView>0</SpeechView>
-            <StartX>158</StartX>
-            <StartY>118</StartY>
-            <StartingRoom>3</StartingRoom>
+            <StartX>382</StartX>
+            <StartY>164</StartY>
+            <StartingRoom>4</StartingRoom>
+            <ThinkingView>0</ThinkingView>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
+          <Character>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <AnimationDelay>4</AnimationDelay>
+            <BlinkingView>0</BlinkingView>
+            <Clickable>True</Clickable>
+            <DiagonalLoops>True</DiagonalLoops>
+            <ID>4</ID>
+            <IdleAnimationDelay>4</IdleAnimationDelay>
+            <IdleDelay>20</IdleDelay>
+            <IdleView>0</IdleView>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <NormalView>1</NormalView>
+            <Properties />
+            <RealName>Emma</RealName>
+            <ScriptName>cEmma</ScriptName>
+            <Solid>True</Solid>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>64543</SpeechColor>
+            <SpeechView>0</SpeechView>
+            <StartX>160</StartX>
+            <StartY>120</StartY>
+            <StartingRoom>-1</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>True</TurnBeforeWalking>
             <UniformMovementSpeed>True</UniformMovementSpeed>
@@ -2689,41 +2743,60 @@
     <PlayerCharacter>0</PlayerCharacter>
     <Dialogs>
       <DialogFolder Name="Main">
-        <SubFolders />
-        <Dialogs>
-          <Dialog>
-            <ID>0</ID>
-            <Name>dRedGlowing_Orb_Wrap_Dialog</Name>
-            <ShowTextParser>False</ShowTextParser>
-            <Script><![CDATA[// Dialog script file
+        <SubFolders>
+          <DialogFolder Name="Spacehip">
+            <SubFolders />
+            <Dialogs>
+              <Dialog>
+                <ID>0</ID>
+                <Name>dJoel1</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
+cZeno: How's it going, Joel?
+cJoel: It's going alright.
+cJoel: I see that you woke up from your long nap.
+cZeno: Was it really that long?
+cJoel: You slept for like 4 hours...
+cZeno: Oh... well...
+cZeno: It was kind of tiresome preparing and beginning for this trip.
+cJoel: No, I understand.
+cJoel: You seem pretty exhausted and stressed when we got assigned this mission.
+cZeno: Well, the company is not really in the best position, so it's kind of hard to be in a good mood...
+cZeno: But never mind that...
 return
 @1
-  {
-    player.Say("HUH!?");
-    player.ChangeRoom(4, 10, 15, eDirectionRight);
-    aScifi_Anime_Whoosh.Play();
-  }
-stop
+cJoel: I've been chilling, just been checking around the ship and making sure everything's all right.
+cZeno: Is everything good?
+cJoel: Yeah, everything seems to be fine.
+cJoel: I recommend you ask Tyler about it. I kind of forgot mostly what he said...
+cZeno: So you didn't check the ship? You only got the report from Tyler?
+cJoel: No, it's just Tyler explains it better than I.
+cZeno: (Sure buddy...)
+return
+
 @2
-stop
+return
 ]]></Script>
-            <DialogOptions>
-              <DialogOption>
-                <ID>1</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Warp to the Desert!</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>2</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text>Cancel</Text>
-              </DialogOption>
-            </DialogOptions>
-          </Dialog>
-        </Dialogs>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Say>True</Say>
+                    <Show>True</Show>
+                    <Text xml:space="preserve">What have you been doing?</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Say>True</Say>
+                    <Show>True</Show>
+                    <Text xml:space="preserve">How are the others?</Text>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+            </Dialogs>
+          </DialogFolder>
+        </SubFolders>
+        <Dialogs />
       </DialogFolder>
     </Dialogs>
     <Cursors>
@@ -4686,6 +4759,142 @@ stop
                     </SubFolders>
                     <Sprites />
                   </SpriteFolder>
+                  <SpriteFolder Name="Zeno">
+                    <SubFolders>
+                      <SpriteFolder Name="Z.Walking">
+                        <SubFolders />
+                        <Sprites>
+                          <Sprite Slot="42" Width="25" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                            <Source>
+                              <FileName>Assets/Sprites/Characters/Zeno/Walking/Zeno_Walking0.png</FileName>
+                              <OffsetX>0</OffsetX>
+                              <OffsetY>0</OffsetY>
+                              <ImportHeight>50</ImportHeight>
+                              <ImportWidth>25</ImportWidth>
+                              <ImportAsTile>False</ImportAsTile>
+                              <Frame>0</Frame>
+                              <RemapToGamePalette>False</RemapToGamePalette>
+                              <RemapToRoomPalette>False</RemapToRoomPalette>
+                              <ImportMethod>LeaveAsIs</ImportMethod>
+                              <ImportAlphaChannel>True</ImportAlphaChannel>
+                            </Source>
+                          </Sprite>
+                          <Sprite Slot="43" Width="25" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                            <Source>
+                              <FileName>Assets/Sprites/Characters/Zeno/Walking/Zeno_Walking1.png</FileName>
+                              <OffsetX>0</OffsetX>
+                              <OffsetY>0</OffsetY>
+                              <ImportHeight>50</ImportHeight>
+                              <ImportWidth>25</ImportWidth>
+                              <ImportAsTile>False</ImportAsTile>
+                              <Frame>0</Frame>
+                              <RemapToGamePalette>False</RemapToGamePalette>
+                              <RemapToRoomPalette>False</RemapToRoomPalette>
+                              <ImportMethod>LeaveAsIs</ImportMethod>
+                              <ImportAlphaChannel>True</ImportAlphaChannel>
+                            </Source>
+                          </Sprite>
+                        </Sprites>
+                      </SpriteFolder>
+                    </SubFolders>
+                    <Sprites>
+                      <Sprite Slot="41" Width="25" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                        <Source>
+                          <FileName>Assets/Sprites/Characters/Zeno/Zeno.png</FileName>
+                          <OffsetX>0</OffsetX>
+                          <OffsetY>0</OffsetY>
+                          <ImportHeight>50</ImportHeight>
+                          <ImportWidth>25</ImportWidth>
+                          <ImportAsTile>False</ImportAsTile>
+                          <Frame>0</Frame>
+                          <RemapToGamePalette>False</RemapToGamePalette>
+                          <RemapToRoomPalette>False</RemapToRoomPalette>
+                          <ImportMethod>LeaveAsIs</ImportMethod>
+                          <ImportAlphaChannel>True</ImportAlphaChannel>
+                        </Source>
+                      </Sprite>
+                    </Sprites>
+                  </SpriteFolder>
+                  <SpriteFolder Name="Joel">
+                    <SubFolders />
+                    <Sprites>
+                      <Sprite Slot="44" Width="26" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                        <Source>
+                          <FileName>Assets/Sprites/Characters/Space Crew Members/Joel.png</FileName>
+                          <OffsetX>0</OffsetX>
+                          <OffsetY>0</OffsetY>
+                          <ImportHeight>50</ImportHeight>
+                          <ImportWidth>26</ImportWidth>
+                          <ImportAsTile>False</ImportAsTile>
+                          <Frame>0</Frame>
+                          <RemapToGamePalette>False</RemapToGamePalette>
+                          <RemapToRoomPalette>False</RemapToRoomPalette>
+                          <ImportMethod>LeaveAsIs</ImportMethod>
+                          <ImportAlphaChannel>True</ImportAlphaChannel>
+                        </Source>
+                      </Sprite>
+                    </Sprites>
+                  </SpriteFolder>
+                  <SpriteFolder Name="Tyler">
+                    <SubFolders />
+                    <Sprites>
+                      <Sprite Slot="45" Width="26" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                        <Source>
+                          <FileName>Assets/Sprites/Characters/Space Crew Members/Tyler.png</FileName>
+                          <OffsetX>0</OffsetX>
+                          <OffsetY>0</OffsetY>
+                          <ImportHeight>50</ImportHeight>
+                          <ImportWidth>26</ImportWidth>
+                          <ImportAsTile>False</ImportAsTile>
+                          <Frame>0</Frame>
+                          <RemapToGamePalette>False</RemapToGamePalette>
+                          <RemapToRoomPalette>False</RemapToRoomPalette>
+                          <ImportMethod>LeaveAsIs</ImportMethod>
+                          <ImportAlphaChannel>True</ImportAlphaChannel>
+                        </Source>
+                      </Sprite>
+                    </Sprites>
+                  </SpriteFolder>
+                  <SpriteFolder Name="Ana">
+                    <SubFolders />
+                    <Sprites>
+                      <Sprite Slot="46" Width="26" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                        <Source>
+                          <FileName>Assets/Sprites/Characters/Space Crew Members/Ana.png</FileName>
+                          <OffsetX>0</OffsetX>
+                          <OffsetY>0</OffsetY>
+                          <ImportHeight>50</ImportHeight>
+                          <ImportWidth>26</ImportWidth>
+                          <ImportAsTile>False</ImportAsTile>
+                          <Frame>0</Frame>
+                          <RemapToGamePalette>False</RemapToGamePalette>
+                          <RemapToRoomPalette>False</RemapToRoomPalette>
+                          <ImportMethod>LeaveAsIs</ImportMethod>
+                          <ImportAlphaChannel>True</ImportAlphaChannel>
+                        </Source>
+                      </Sprite>
+                    </Sprites>
+                  </SpriteFolder>
+                  <SpriteFolder Name="Emma">
+                    <SubFolders />
+                    <Sprites>
+                      <Sprite Slot="47" Width="26" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                        <Source>
+                          <FileName>Assets/Sprites/Characters/Space Crew Members/Emma.png</FileName>
+                          <OffsetX>0</OffsetX>
+                          <OffsetY>0</OffsetY>
+                          <ImportHeight>50</ImportHeight>
+                          <ImportWidth>26</ImportWidth>
+                          <ImportAsTile>False</ImportAsTile>
+                          <Frame>0</Frame>
+                          <RemapToGamePalette>False</RemapToGamePalette>
+                          <RemapToRoomPalette>False</RemapToRoomPalette>
+                          <ImportMethod>LeaveAsIs</ImportMethod>
+                          <ImportAlphaChannel>True</ImportAlphaChannel>
+                        </Source>
+                      </Sprite>
+                    </Sprites>
+                  </SpriteFolder>
                 </SubFolders>
                 <Sprites>
                   <Sprite Slot="2" Width="25" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
@@ -5573,7 +5782,7 @@ stop
         <Views>
           <View>
             <ID>1</ID>
-            <Name>VIEW1</Name>
+            <Name>VZeno</Name>
             <Loops>
               <Loop>
                 <ID>0</ID>
@@ -5583,49 +5792,21 @@ stop
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>0</ID>
-                    <Image>32</Image>
+                    <Image>41</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>1</ID>
-                    <Image>33</Image>
+                    <Image>42</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>2</ID>
-                    <Image>34</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>3</ID>
-                    <Image>35</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>4</ID>
-                    <Image>36</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>5</ID>
-                    <Image>37</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>6</ID>
-                    <Image>38</Image>
+                    <Image>43</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                 </Frames>
@@ -5638,49 +5819,21 @@ stop
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>0</ID>
-                    <Image>2010</Image>
+                    <Image>41</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>1</ID>
-                    <Image>2011</Image>
+                    <Image>42</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>2</ID>
-                    <Image>2012</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>3</ID>
-                    <Image>2013</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>4</ID>
-                    <Image>2014</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>5</ID>
-                    <Image>2015</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>6</ID>
-                    <Image>2016</Image>
+                    <Image>43</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                 </Frames>
@@ -5693,49 +5846,21 @@ stop
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>0</ID>
-                    <Image>2020</Image>
+                    <Image>41</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>1</ID>
-                    <Image>2021</Image>
+                    <Image>42</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>2</ID>
-                    <Image>2022</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>3</ID>
-                    <Image>2023</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>4</ID>
-                    <Image>2024</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>5</ID>
-                    <Image>2025</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>6</ID>
-                    <Image>2026</Image>
+                    <Image>43</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                 </Frames>
@@ -5748,49 +5873,21 @@ stop
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>0</ID>
-                    <Image>2030</Image>
+                    <Image>41</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>1</ID>
-                    <Image>2031</Image>
+                    <Image>42</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>2</ID>
-                    <Image>2032</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>3</ID>
-                    <Image>2033</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>4</ID>
-                    <Image>2034</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>5</ID>
-                    <Image>2035</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>6</ID>
-                    <Image>2036</Image>
+                    <Image>43</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                 </Frames>
@@ -5799,7 +5896,7 @@ stop
           </View>
           <View>
             <ID>2</ID>
-            <Name>View2_cAlt</Name>
+            <Name>VJoel</Name>
             <Loops>
               <Loop>
                 <ID>0</ID>
@@ -5809,7 +5906,7 @@ stop
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>0</ID>
-                    <Image>2</Image>
+                    <Image>44</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                 </Frames>
@@ -5849,7 +5946,7 @@ stop
           </View>
           <View>
             <ID>3</ID>
-            <Name>VEgo_C</Name>
+            <Name>VTyler</Name>
             <Loops>
               <Loop>
                 <ID>0</ID>
@@ -5859,28 +5956,7 @@ stop
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>0</ID>
-                    <Image>6</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>1</ID>
-                    <Image>7</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>2</ID>
-                    <Image>8</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>3</ID>
-                    <Image>9</Image>
+                    <Image>45</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                 </Frames>
@@ -5889,7 +5965,7 @@ stop
           </View>
           <View>
             <ID>4</ID>
-            <Name>VMike</Name>
+            <Name>VAna</Name>
             <Loops>
               <Loop>
                 <ID>0</ID>
@@ -5899,7 +5975,7 @@ stop
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>0</ID>
-                    <Image>16</Image>
+                    <Image>46</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                 </Frames>
@@ -5934,6 +6010,25 @@ stop
                 <ID>3</ID>
                 <RunNextLoop>False</RunNextLoop>
                 <Frames />
+              </Loop>
+            </Loops>
+          </View>
+          <View>
+            <ID>8</ID>
+            <Name>VEmma</Name>
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>47</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
               </Loop>
             </Loops>
           </View>
