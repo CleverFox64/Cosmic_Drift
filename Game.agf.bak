@@ -695,7 +695,7 @@
             <SubFolders />
             <UnloadedRooms>
               <UnloadedRoom>
-                <Description xml:space="preserve">Dry Planet ~ West</Description>
+                <Description xml:space="preserve">Dry Planet ~ Center</Description>
                 <Number>8</Number>
               </UnloadedRoom>
             </UnloadedRooms>
@@ -706,7 +706,7 @@
                 <SubFolders />
                 <UnloadedRooms>
                   <UnloadedRoom>
-                    <Description IsNull="True" />
+                    <Description xml:space="preserve">Joel's Spacecraft</Description>
                     <Number>9</Number>
                   </UnloadedRoom>
                 </UnloadedRooms>
@@ -2553,7 +2553,55 @@
     </TextParser>
     <Characters>
       <CharacterFolder Name="Main">
-        <SubFolders />
+        <SubFolders>
+          <CharacterFolder Name="Rock Creatures">
+            <SubFolders />
+            <Characters>
+              <Character>
+                <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+                <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+                <AnimationDelay>4</AnimationDelay>
+                <BlinkingView>0</BlinkingView>
+                <Clickable>True</Clickable>
+                <DiagonalLoops>True</DiagonalLoops>
+                <ID>5</ID>
+                <IdleAnimationDelay>4</IdleAnimationDelay>
+                <IdleDelay>20</IdleDelay>
+                <IdleView>0</IdleView>
+                <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+                <MovementSpeed>3</MovementSpeed>
+                <MovementSpeedX>0</MovementSpeedX>
+                <MovementSpeedY>0</MovementSpeedY>
+                <NormalView>9</NormalView>
+                <Properties />
+                <RealName xml:space="preserve">Rock Creature</RealName>
+                <ScriptName>cRockCreature01</ScriptName>
+                <Solid>True</Solid>
+                <SpeechAnimationDelay>5</SpeechAnimationDelay>
+                <SpeechColor>64512</SpeechColor>
+                <SpeechView>0</SpeechView>
+                <StartX>261</StartX>
+                <StartY>181</StartY>
+                <StartingRoom>8</StartingRoom>
+                <ThinkingView>0</ThinkingView>
+                <TurnBeforeWalking>True</TurnBeforeWalking>
+                <UniformMovementSpeed>True</UniformMovementSpeed>
+                <UseRoomAreaLighting>True</UseRoomAreaLighting>
+                <UseRoomAreaScaling>True</UseRoomAreaScaling>
+                <Interactions>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                  <Event Index="5" />
+                  <Event Index="6" />
+                  <Event Index="7" />
+                </Interactions>
+              </Character>
+            </Characters>
+          </CharacterFolder>
+        </SubFolders>
         <Characters>
           <Character>
             <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
@@ -5043,6 +5091,26 @@ return
                       </Sprite>
                     </Sprites>
                   </SpriteFolder>
+                  <SpriteFolder Name="Rock Creatures">
+                    <SubFolders />
+                    <Sprites>
+                      <Sprite Slot="51" Width="50" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                        <Source>
+                          <FileName>Assets/Sprites/Characters/Rock Creatures/Rock_Creature01.png</FileName>
+                          <OffsetX>0</OffsetX>
+                          <OffsetY>0</OffsetY>
+                          <ImportHeight>50</ImportHeight>
+                          <ImportWidth>50</ImportWidth>
+                          <ImportAsTile>False</ImportAsTile>
+                          <Frame>0</Frame>
+                          <RemapToGamePalette>False</RemapToGamePalette>
+                          <RemapToRoomPalette>False</RemapToRoomPalette>
+                          <ImportMethod>LeaveAsIs</ImportMethod>
+                          <ImportAlphaChannel>True</ImportAlphaChannel>
+                        </Source>
+                      </Sprite>
+                    </Sprites>
+                  </SpriteFolder>
                 </SubFolders>
                 <Sprites>
                   <Sprite Slot="2" Width="25" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
@@ -5279,6 +5347,26 @@ return
                           <OffsetY>0</OffsetY>
                           <ImportHeight>21</ImportHeight>
                           <ImportWidth>20</ImportWidth>
+                          <ImportAsTile>False</ImportAsTile>
+                          <Frame>0</Frame>
+                          <RemapToGamePalette>False</RemapToGamePalette>
+                          <RemapToRoomPalette>False</RemapToRoomPalette>
+                          <ImportMethod>LeaveAsIs</ImportMethod>
+                          <ImportAlphaChannel>True</ImportAlphaChannel>
+                        </Source>
+                      </Sprite>
+                    </Sprites>
+                  </SpriteFolder>
+                  <SpriteFolder Name="Spacecraft">
+                    <SubFolders />
+                    <Sprites>
+                      <Sprite Slot="52" Width="88" Height="89" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                        <Source>
+                          <FileName>Assets/Sprites/Spacecraft/Joel Spacecraft.png</FileName>
+                          <OffsetX>0</OffsetX>
+                          <OffsetY>0</OffsetY>
+                          <ImportHeight>89</ImportHeight>
+                          <ImportWidth>88</ImportWidth>
                           <ImportAsTile>False</ImportAsTile>
                           <Frame>0</Frame>
                           <RemapToGamePalette>False</RemapToGamePalette>
@@ -5970,6 +6058,69 @@ return
               </ViewFolder>
             </SubFolders>
             <Views />
+          </ViewFolder>
+          <ViewFolder Name="Rock Creatures">
+            <SubFolders />
+            <Views>
+              <View>
+                <ID>9</ID>
+                <Name>VRockCreature01</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>51</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>1</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>51</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>2</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>51</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>3</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>51</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+            </Views>
           </ViewFolder>
         </SubFolders>
         <Views>
