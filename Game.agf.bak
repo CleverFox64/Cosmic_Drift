@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>20</AudioIndexer>
+      <AudioIndexer>24</AudioIndexer>
       <AutoMoveInWalkMode>True</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BuildTargets xml:space="preserve">Windows, Web</BuildTargets>
@@ -697,6 +697,14 @@
               <UnloadedRoom>
                 <Description xml:space="preserve">Dry Planet ~ Center</Description>
                 <Number>8</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description xml:space="preserve">Dry Planet ~ SW</Description>
+                <Number>10</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description xml:space="preserve">Dry Planet ~ NW</Description>
+                <Number>11</Number>
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
@@ -2202,189 +2210,109 @@
     </GUIs>
     <InventoryItems>
       <InventoryItemFolder Name="Main">
-        <SubFolders />
-        <InventoryItems>
-          <InventoryItem>
-            <CursorImage>2041</CursorImage>
-            <Description xml:space="preserve">Blue Cup</Description>
-            <HotspotX>1</HotspotX>
-            <HotspotY>1</HotspotY>
-            <ID>1</ID>
-            <Image>2041</Image>
-            <Name>iBlueCup</Name>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
-            <Properties />
-            <Interactions>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3">iBlueCup_UseInv</Event>
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>2042</CursorImage>
-            <Description>Key</Description>
-            <HotspotX>1</HotspotX>
-            <HotspotY>1</HotspotY>
-            <ID>2</ID>
-            <Image>2042</Image>
-            <Name>iKey</Name>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
-            <Properties />
-            <Interactions>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>3</CursorImage>
-            <Description xml:space="preserve">A block of Cheese</Description>
-            <HotspotX>1</HotspotX>
-            <HotspotY>1</HotspotY>
-            <ID>3</ID>
-            <Image>3</Image>
-            <Name>iCheese</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties />
-            <Interactions>
-              <Event Index="0">iCheese_Look</Event>
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3">iCheese_UseInv</Event>
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>5</CursorImage>
-            <Description xml:space="preserve">Slice of Toast</Description>
-            <HotspotX>1</HotspotX>
-            <HotspotY>1</HotspotY>
-            <ID>4</ID>
-            <Image>5</Image>
-            <Name>iToast</Name>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
-            <Properties />
-            <Interactions>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3">iToast_UseInv</Event>
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>4</CursorImage>
-            <Description xml:space="preserve">It's a Grilled Cheese Sandwich!</Description>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <ID>5</ID>
-            <Image>4</Image>
-            <Name>iGrilled_Cheese_Sandwich</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties />
-            <Interactions>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>11</CursorImage>
-            <Description xml:space="preserve">Ice Key</Description>
-            <HotspotX>1</HotspotX>
-            <HotspotY>1</HotspotY>
-            <ID>6</ID>
-            <Image>11</Image>
-            <Name>iIce_Key</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties />
-            <Interactions>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>10</CursorImage>
-            <Description xml:space="preserve">Ice Cube</Description>
-            <HotspotX>1</HotspotX>
-            <HotspotY>1</HotspotY>
-            <ID>7</ID>
-            <Image>10</Image>
-            <Name>iIce_Cube</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties />
-            <Interactions>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3">iIce_Cube_UseInv</Event>
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>15</CursorImage>
-            <Description xml:space="preserve">Blue Cup w/ Water</Description>
-            <HotspotX>1</HotspotX>
-            <HotspotY>1</HotspotY>
-            <ID>8</ID>
-            <Image>15</Image>
-            <Name>iBlue_Cup_wWater</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties />
-            <Interactions>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3">iBlue_Cup_wWater_UseInv</Event>
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>12</CursorImage>
-            <Description xml:space="preserve">B.Cup w/ Water &amp; Ice</Description>
-            <HotspotX>1</HotspotX>
-            <HotspotY>1</HotspotY>
-            <ID>9</ID>
-            <Image>12</Image>
-            <Name>iBlue_Cup_wWater_and_Ice</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties />
-            <Interactions>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>21</CursorImage>
-            <Description xml:space="preserve">Cowboy Badge</Description>
-            <HotspotX>1</HotspotX>
-            <HotspotY>1</HotspotY>
-            <ID>10</ID>
-            <Image>21</Image>
-            <Name>iCowboy_Badge</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties />
-            <Interactions>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-        </InventoryItems>
+        <SubFolders>
+          <InventoryItemFolder Name="Example Test Items">
+            <SubFolders />
+            <InventoryItems>
+              <InventoryItem>
+                <CursorImage>2041</CursorImage>
+                <Description xml:space="preserve">New inventory item</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>1</ID>
+                <Image>2041</Image>
+                <Name>iInvItem1</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties />
+                <Interactions>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+            </InventoryItems>
+          </InventoryItemFolder>
+          <InventoryItemFolder Name="Dry Planet">
+            <SubFolders />
+            <InventoryItems>
+              <InventoryItem>
+                <CursorImage>55</CursorImage>
+                <Description>Stick</Description>
+                <HotspotX>1</HotspotX>
+                <HotspotY>1</HotspotY>
+                <ID>2</ID>
+                <Image>55</Image>
+                <Name>iStick</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties />
+                <Interactions>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>56</CursorImage>
+                <Description xml:space="preserve">Yellow Citrc Stone</Description>
+                <HotspotX>1</HotspotX>
+                <HotspotY>1</HotspotY>
+                <ID>3</ID>
+                <Image>56</Image>
+                <Name>iYellowCitrcStone</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties />
+                <Interactions>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>58</CursorImage>
+                <Description>Hammer</Description>
+                <HotspotX>1</HotspotX>
+                <HotspotY>1</HotspotY>
+                <ID>4</ID>
+                <Image>58</Image>
+                <Name>iDryP_Hammer</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties />
+                <Interactions>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>57</CursorImage>
+                <Description>Rock</Description>
+                <HotspotX>1</HotspotX>
+                <HotspotY>1</HotspotY>
+                <ID>5</ID>
+                <Image>57</Image>
+                <Name>iDryP_Rock</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties />
+                <Interactions>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+            </InventoryItems>
+          </InventoryItemFolder>
+        </SubFolders>
+        <InventoryItems />
       </InventoryItemFolder>
     </InventoryItems>
     <TextParser>
@@ -2591,7 +2519,49 @@
                 <Interactions>
                   <Event Index="0" />
                   <Event Index="1" />
-                  <Event Index="2" />
+                  <Event Index="2">cRockCreature01_Talk</Event>
+                  <Event Index="3" />
+                  <Event Index="4" />
+                  <Event Index="5" />
+                  <Event Index="6" />
+                  <Event Index="7" />
+                </Interactions>
+              </Character>
+              <Character>
+                <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+                <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+                <AnimationDelay>4</AnimationDelay>
+                <BlinkingView>0</BlinkingView>
+                <Clickable>True</Clickable>
+                <DiagonalLoops>True</DiagonalLoops>
+                <ID>6</ID>
+                <IdleAnimationDelay>4</IdleAnimationDelay>
+                <IdleDelay>20</IdleDelay>
+                <IdleView>0</IdleView>
+                <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+                <MovementSpeed>3</MovementSpeed>
+                <MovementSpeedX>0</MovementSpeedX>
+                <MovementSpeedY>0</MovementSpeedY>
+                <NormalView>9</NormalView>
+                <Properties />
+                <RealName xml:space="preserve">RC Merchant</RealName>
+                <ScriptName>cRC_Merchant</ScriptName>
+                <Solid>True</Solid>
+                <SpeechAnimationDelay>5</SpeechAnimationDelay>
+                <SpeechColor>64512</SpeechColor>
+                <SpeechView>0</SpeechView>
+                <StartX>292</StartX>
+                <StartY>134</StartY>
+                <StartingRoom>10</StartingRoom>
+                <ThinkingView>0</ThinkingView>
+                <TurnBeforeWalking>True</TurnBeforeWalking>
+                <UniformMovementSpeed>True</UniformMovementSpeed>
+                <UseRoomAreaLighting>True</UseRoomAreaLighting>
+                <UseRoomAreaScaling>True</UseRoomAreaScaling>
+                <Interactions>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2">cRC_Merchant_Talk</Event>
                   <Event Index="3" />
                   <Event Index="4" />
                   <Event Index="5" />
@@ -2990,6 +2960,172 @@ return
                 <DialogOptions />
               </Dialog>
             </Dialogs>
+          </DialogFolder>
+          <DialogFolder Name="Dry Planet">
+            <SubFolders>
+              <DialogFolder Name="Dry Planet ~ Center Location">
+                <SubFolders />
+                <Dialogs>
+                  <Dialog>
+                    <ID>5</ID>
+                    <Name>dFirstTimeLandin_CL</Name>
+                    <ShowTextParser>False</ShowTextParser>
+                    <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+cRockCreature01: Uhh???
+cJoel: Hello!
+cRockCreature01: H-hi...
+cJoel: Can you understand me?
+cRockCreature01: Why yes! How did you do that?
+cJoel: I have a little Gadget that helps me understand.
+cRockCreature01: How Cool!
+
+cJoel: See, I would love to chit-chat chat, but I'm kind of in an emergency.
+cRockCreature01: Emergency?
+cJoel: Yeah, I'm all out of water...
+cRockCreature01: Water... The liquid?
+cJoel: Yes, and I'm currently out of some.
+cJoel: I kind of need it for my body to sustain.
+cRockCreature01: Mmm... I would let you into the town, but you kind of came onto our planet expectedly...
+cRockCreature01: I don't think it would boat well if you just randomly barge in...
+
+cJoel: Oh...
+cRockCreature01: However, there are different places you can go that will have water.
+cJoel: Any suggestions?
+cRockCreature01: Well, you're currently located at the center of the planet.
+cRockCreature01: So... maybe go Southwest from here? I think we have a couple of lakes there.
+cJoel: Sweet, thank you!
+cRockCreature01: Happy to help! If you need anything from me, just ask.
+return
+]]></Script>
+                    <DialogOptions />
+                  </Dialog>
+                  <Dialog>
+                    <ID>6</ID>
+                    <Name>dRockCreature01_Reminder</Name>
+                    <ShowTextParser>False</ShowTextParser>
+                    <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+cRockCreature01: Oh, It's you! How can I help you?
+
+return
+@1
+cRockCreature01: There are many different places you can go that will have water.
+cRockCreature01: Hmm... We're currently at the center of the planet...
+cRockCreature01: If I had to suggest a more specific location...
+cRockCreature01: I would say try going Southwest from here. There should be a couple of lakes there.
+
+return
+@2
+return
+@3
+cRockCreature01: See ya! Good luck finding what you need!
+stop
+]]></Script>
+                    <DialogOptions>
+                      <DialogOption>
+                        <ID>1</ID>
+                        <Say>True</Say>
+                        <Show>True</Show>
+                        <Text xml:space="preserve">Where should I go again?</Text>
+                      </DialogOption>
+                      <DialogOption>
+                        <ID>2</ID>
+                        <Say>False</Say>
+                        <Show>True</Show>
+                        <Text>...</Text>
+                      </DialogOption>
+                      <DialogOption>
+                        <ID>3</ID>
+                        <Say>True</Say>
+                        <Show>True</Show>
+                        <Text xml:space="preserve">I'm Good! See ya!</Text>
+                      </DialogOption>
+                    </DialogOptions>
+                  </Dialog>
+                  <Dialog>
+                    <ID>7</ID>
+                    <Name>dRC_Merchant_Reminder</Name>
+                    <ShowTextParser>False</ShowTextParser>
+                    <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+cRC_Merchant: Oh, it's you again. Jump the gun creature!
+cJoel: (...)
+cRC_Merchant: How can I help you?
+
+return
+@1
+cRC_Merchant: You need to find Yellow Citrc Stone.
+cRC_Merchant: There usually located around dark purple areas on the planet.
+cRC_Merchant: They're engraved in rocks near there.
+cRC_Merchant: You might need something that can break it to get it.
+
+return
+@2
+return
+@3
+cRC_Merchant: Good luck on your journey. Remember to be mindful of your surroundings...
+cJoel: Haha... Will do.
+stop
+]]></Script>
+                    <DialogOptions>
+                      <DialogOption>
+                        <ID>1</ID>
+                        <Say>True</Say>
+                        <Show>True</Show>
+                        <Text xml:space="preserve">How do I purify the liquid again?</Text>
+                      </DialogOption>
+                      <DialogOption>
+                        <ID>2</ID>
+                        <Say>True</Say>
+                        <Show>True</Show>
+                        <Text>...</Text>
+                      </DialogOption>
+                      <DialogOption>
+                        <ID>3</ID>
+                        <Say>True</Say>
+                        <Show>True</Show>
+                        <Text xml:space="preserve">I'm Good, Thank you!</Text>
+                      </DialogOption>
+                    </DialogOptions>
+                  </Dialog>
+                  <Dialog>
+                    <ID>8</ID>
+                    <Name>dRockCreature01_Rock</Name>
+                    <ShowTextParser>False</ShowTextParser>
+                    <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+cRockCreature01: Oh hey, it's you. Did you find what you were looking for?
+cJoel: Sort of.
+cJoel: I found a liquid that seems to be water, but it's not drinkable in its current state.
+cRockCreature01: (Hmm... what could that mean?)
+cJoel: I talked to somebody else, and they said I had to purify the liquid.
+cRockCreature01: Ah, it's those kinds of liquids.
+cJoel: Hm?
+cRockCreature01: By chance, did the other individual tell you need a Yellow Citrc Stone?
+cJoel: Why yes! I needed the stone to purify the water. The thing is, I don't have anything to get the stone.
+
+cRockCreature01: Oh, I see. I may have something that could help you.
+cJoel: What would that be?
+cRockCreature01: It's a rock, but that won't be good enough on its own to break it.
+cRockCreature01: Maybe if you give me something else with it, I can turn it into an actual tool.
+cJoel: Like a hammer?
+cRockCreature01:Yeah, that will work.
+cRockCreature01: (I don't know what a hammer is...)
+cJoel: Oh okay, thanks. I'll see what I can do.
+
+  //Script
+  cJoel.AddInventory(iDryP_Rock);
+  aSci_Fi_Fast_Good_Bleep.Play();
+  Display("Joel got a Rock!");
+return
+]]></Script>
+                    <DialogOptions />
+                  </Dialog>
+                </Dialogs>
+              </DialogFolder>
+            </SubFolders>
+            <Dialogs />
           </DialogFolder>
         </SubFolders>
         <Dialogs />
@@ -3440,6 +3576,11 @@ return
           <DefaultValue />
           <Name>BgMusic</Name>
           <Type>AudioChannel*</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <DefaultValue />
+          <Name>Joel_Expedition</Name>
+          <Type>int</Type>
         </GlobalVariable>
       </Variables>
     </GlobalVariables>
@@ -4594,7 +4735,118 @@ return
                 </Sprites>
               </SpriteFolder>
               <SpriteFolder Name="Items">
-                <SubFolders />
+                <SubFolders>
+                  <SpriteFolder Name="Stick">
+                    <SubFolders />
+                    <Sprites>
+                      <Sprite Slot="53" Width="20" Height="21" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                        <Source>
+                          <FileName>Assets/Sprites/Items/Stick/Stick01.png</FileName>
+                          <OffsetX>0</OffsetX>
+                          <OffsetY>0</OffsetY>
+                          <ImportHeight>21</ImportHeight>
+                          <ImportWidth>20</ImportWidth>
+                          <ImportAsTile>False</ImportAsTile>
+                          <Frame>0</Frame>
+                          <RemapToGamePalette>False</RemapToGamePalette>
+                          <RemapToRoomPalette>False</RemapToRoomPalette>
+                          <ImportMethod>LeaveAsIs</ImportMethod>
+                          <ImportAlphaChannel>True</ImportAlphaChannel>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="54" Width="20" Height="21" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                        <Source>
+                          <FileName>Assets/Sprites/Items/Stick/Stick02.png</FileName>
+                          <OffsetX>0</OffsetX>
+                          <OffsetY>0</OffsetY>
+                          <ImportHeight>21</ImportHeight>
+                          <ImportWidth>20</ImportWidth>
+                          <ImportAsTile>False</ImportAsTile>
+                          <Frame>0</Frame>
+                          <RemapToGamePalette>False</RemapToGamePalette>
+                          <RemapToRoomPalette>False</RemapToRoomPalette>
+                          <ImportMethod>LeaveAsIs</ImportMethod>
+                          <ImportAlphaChannel>True</ImportAlphaChannel>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="55" Width="20" Height="21" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                        <Source>
+                          <FileName>Assets/Sprites/Items/Stick/Stick03.png</FileName>
+                          <OffsetX>0</OffsetX>
+                          <OffsetY>0</OffsetY>
+                          <ImportHeight>21</ImportHeight>
+                          <ImportWidth>20</ImportWidth>
+                          <ImportAsTile>False</ImportAsTile>
+                          <Frame>0</Frame>
+                          <RemapToGamePalette>False</RemapToGamePalette>
+                          <RemapToRoomPalette>False</RemapToRoomPalette>
+                          <ImportMethod>LeaveAsIs</ImportMethod>
+                          <ImportAlphaChannel>True</ImportAlphaChannel>
+                        </Source>
+                      </Sprite>
+                    </Sprites>
+                  </SpriteFolder>
+                  <SpriteFolder Name="Yellow Citrc Stone">
+                    <SubFolders />
+                    <Sprites>
+                      <Sprite Slot="56" Width="20" Height="21" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                        <Source>
+                          <FileName>Assets/Sprites/Items/Yellow Citrc Stone/Yellow Citrc Stone.png</FileName>
+                          <OffsetX>0</OffsetX>
+                          <OffsetY>0</OffsetY>
+                          <ImportHeight>21</ImportHeight>
+                          <ImportWidth>20</ImportWidth>
+                          <ImportAsTile>False</ImportAsTile>
+                          <Frame>0</Frame>
+                          <RemapToGamePalette>False</RemapToGamePalette>
+                          <RemapToRoomPalette>False</RemapToRoomPalette>
+                          <ImportMethod>LeaveAsIs</ImportMethod>
+                          <ImportAlphaChannel>True</ImportAlphaChannel>
+                        </Source>
+                      </Sprite>
+                    </Sprites>
+                  </SpriteFolder>
+                  <SpriteFolder Name="Rocks">
+                    <SubFolders />
+                    <Sprites>
+                      <Sprite Slot="57" Width="20" Height="21" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                        <Source>
+                          <FileName>Assets/Sprites/Items/Rocks/Normal Rock.png</FileName>
+                          <OffsetX>0</OffsetX>
+                          <OffsetY>0</OffsetY>
+                          <ImportHeight>21</ImportHeight>
+                          <ImportWidth>20</ImportWidth>
+                          <ImportAsTile>False</ImportAsTile>
+                          <Frame>0</Frame>
+                          <RemapToGamePalette>False</RemapToGamePalette>
+                          <RemapToRoomPalette>False</RemapToRoomPalette>
+                          <ImportMethod>LeaveAsIs</ImportMethod>
+                          <ImportAlphaChannel>True</ImportAlphaChannel>
+                        </Source>
+                      </Sprite>
+                    </Sprites>
+                  </SpriteFolder>
+                  <SpriteFolder Name="Tools">
+                    <SubFolders />
+                    <Sprites>
+                      <Sprite Slot="58" Width="20" Height="21" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                        <Source>
+                          <FileName>Assets/Sprites/Items/Hammer/Hammer.png</FileName>
+                          <OffsetX>0</OffsetX>
+                          <OffsetY>0</OffsetY>
+                          <ImportHeight>21</ImportHeight>
+                          <ImportWidth>20</ImportWidth>
+                          <ImportAsTile>False</ImportAsTile>
+                          <Frame>0</Frame>
+                          <RemapToGamePalette>False</RemapToGamePalette>
+                          <RemapToRoomPalette>False</RemapToRoomPalette>
+                          <ImportMethod>LeaveAsIs</ImportMethod>
+                          <ImportAlphaChannel>True</ImportAlphaChannel>
+                        </Source>
+                      </Sprite>
+                    </Sprites>
+                  </SpriteFolder>
+                </SubFolders>
                 <Sprites>
                   <Sprite Slot="3" Width="20" Height="21" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
@@ -6263,7 +6515,7 @@ return
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>0</ID>
-                    <Image>0</Image>
+                    <Image>44</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                 </Frames>
@@ -6276,7 +6528,7 @@ return
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>0</ID>
-                    <Image>0</Image>
+                    <Image>44</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                 </Frames>
@@ -6284,7 +6536,15 @@ return
               <Loop>
                 <ID>3</ID>
                 <RunNextLoop>False</RunNextLoop>
-                <Frames />
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>44</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
               </Loop>
             </Loops>
           </View>
@@ -6831,6 +7091,82 @@ See KeyboardMovement.txt for details.
                     <FileLastModifiedDate>2024-09-11 14:53:45Z</FileLastModifiedDate>
                   </AudioClip>
                 </AudioClips>
+                <AudioClipFolder>
+                  <DefaultBundlingType>InGameEXE</DefaultBundlingType>
+                  <DefaultPriority>Inherit</DefaultPriority>
+                  <DefaultRepeat>Inherit</DefaultRepeat>
+                  <DefaultType>3</DefaultType>
+                  <DefaultVolume>100</DefaultVolume>
+                </AudioClipFolder>
+              </AudioClipFolder>
+              <AudioClipFolder Name="Sci-Fi">
+                <SubFolders>
+                  <AudioClipFolder Name="Chimes">
+                    <SubFolders />
+                    <AudioClips>
+                      <AudioClip>
+                        <BundlingType>InGameEXE</BundlingType>
+                        <DefaultPriority>Inherit</DefaultPriority>
+                        <DefaultRepeat>Inherit</DefaultRepeat>
+                        <DefaultVolume>-1</DefaultVolume>
+                        <FileType>OGG</FileType>
+                        <ID>16</ID>
+                        <Index>21</Index>
+                        <ScriptName>aSci_Fi_Fast_Good_Bleep</ScriptName>
+                        <SourceFileName xml:space="preserve">Assets/Audio/SFX/Sci-Fi Chimes/Ogg/Sci-Fi Fast Good Bleep.ogg</SourceFileName>
+                        <Type>3</Type>
+                        <FileLastModifiedDate>2024-10-07 05:20:16Z</FileLastModifiedDate>
+                      </AudioClip>
+                      <AudioClip>
+                        <BundlingType>InGameEXE</BundlingType>
+                        <DefaultPriority>Inherit</DefaultPriority>
+                        <DefaultRepeat>Inherit</DefaultRepeat>
+                        <DefaultVolume>-1</DefaultVolume>
+                        <FileType>OGG</FileType>
+                        <ID>17</ID>
+                        <Index>22</Index>
+                        <ScriptName>aSci_Fi_Notification</ScriptName>
+                        <SourceFileName xml:space="preserve">Assets/Audio/SFX/Sci-Fi Chimes/Ogg/Sci-Fi Notification.ogg</SourceFileName>
+                        <Type>3</Type>
+                        <FileLastModifiedDate>2024-10-07 05:19:46Z</FileLastModifiedDate>
+                      </AudioClip>
+                      <AudioClip>
+                        <BundlingType>InGameEXE</BundlingType>
+                        <DefaultPriority>Inherit</DefaultPriority>
+                        <DefaultRepeat>Inherit</DefaultRepeat>
+                        <DefaultVolume>-1</DefaultVolume>
+                        <FileType>OGG</FileType>
+                        <ID>18</ID>
+                        <Index>23</Index>
+                        <ScriptName>aSci_Fi_Reject_Notification</ScriptName>
+                        <SourceFileName xml:space="preserve">Assets/Audio/SFX/Sci-Fi Chimes/Ogg/Sci Fi Reject Notification.ogg</SourceFileName>
+                        <Type>3</Type>
+                        <FileLastModifiedDate>2024-10-07 06:16:22Z</FileLastModifiedDate>
+                      </AudioClip>
+                      <AudioClip>
+                        <BundlingType>InGameEXE</BundlingType>
+                        <DefaultPriority>Inherit</DefaultPriority>
+                        <DefaultRepeat>Inherit</DefaultRepeat>
+                        <DefaultVolume>-1</DefaultVolume>
+                        <FileType>OGG</FileType>
+                        <ID>19</ID>
+                        <Index>24</Index>
+                        <ScriptName>aSci_Fi_Mechanical_Bling</ScriptName>
+                        <SourceFileName xml:space="preserve">Assets/Audio/SFX/Sci-Fi Chimes/Ogg/Sci-Fi Mechanical Bling.ogg</SourceFileName>
+                        <Type>3</Type>
+                        <FileLastModifiedDate>2024-10-07 06:16:05Z</FileLastModifiedDate>
+                      </AudioClip>
+                    </AudioClips>
+                    <AudioClipFolder>
+                      <DefaultBundlingType>InGameEXE</DefaultBundlingType>
+                      <DefaultPriority>Inherit</DefaultPriority>
+                      <DefaultRepeat>Inherit</DefaultRepeat>
+                      <DefaultType>3</DefaultType>
+                      <DefaultVolume>100</DefaultVolume>
+                    </AudioClipFolder>
+                  </AudioClipFolder>
+                </SubFolders>
+                <AudioClips />
                 <AudioClipFolder>
                   <DefaultBundlingType>InGameEXE</DefaultBundlingType>
                   <DefaultPriority>Inherit</DefaultPriority>
