@@ -107,7 +107,7 @@
       <SoundCacheSize>32</SoundCacheSize>
       <SpriteCacheSize>128</SpriteCacheSize>
       <TextureCacheSize>128</TextureCacheSize>
-      <TitleText xml:space="preserve">A01_ Make_a_Thing_Do_a_Thing Setup</TitleText>
+      <TitleText xml:space="preserve">Comic Drift Setup</TitleText>
       <TouchToMouseEmulation>OneFinger</TouchToMouseEmulation>
       <TouchToMouseMotionMode>Direct</TouchToMouseMotionMode>
       <Translation />
@@ -4111,7 +4111,7 @@ return
                   </Sprite>
                   <Sprite Slot="2128" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Save/Save ~ Normal.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Save/Save ~ Normal02.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -4126,7 +4126,7 @@ return
                   </Sprite>
                   <Sprite Slot="2129" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Save/Save ~ Highlighted.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Save/Save ~ Highlighted02.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -4141,7 +4141,7 @@ return
                   </Sprite>
                   <Sprite Slot="2130" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Save/Save ~ Pressed.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Save/Save ~ Pressed02.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -4171,7 +4171,7 @@ return
                   </Sprite>
                   <Sprite Slot="2132" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Load/Load ~ Normal.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Load/Load ~ Normal02.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -4186,7 +4186,7 @@ return
                   </Sprite>
                   <Sprite Slot="2133" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Load/Load ~ Highlighted.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Load/Load ~ Highlighted02.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -4201,7 +4201,7 @@ return
                   </Sprite>
                   <Sprite Slot="2134" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Load/Load ~ Pressed.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Load/Load ~ Pressed02.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
