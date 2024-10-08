@@ -737,9 +737,9 @@
         <GUIs>
           <GUIMain>
             <NormalGUI>
-              <BackgroundColor>32089</BackgroundColor>
+              <BackgroundColor>6508</BackgroundColor>
               <BackgroundImage>0</BackgroundImage>
-              <BorderColor>32089</BorderColor>
+              <BorderColor>8690</BorderColor>
               <Clickable>True</Clickable>
               <Height>14</Height>
               <ID>0</ID>
@@ -813,9 +813,9 @@
           </GUIMain>
           <GUIMain>
             <NormalGUI>
-              <BackgroundColor>32089</BackgroundColor>
+              <BackgroundColor>8690</BackgroundColor>
               <BackgroundImage>0</BackgroundImage>
-              <BorderColor>32089</BorderColor>
+              <BorderColor>8690</BorderColor>
               <Clickable>True</Clickable>
               <Height>29</Height>
               <ID>1</ID>
@@ -2269,7 +2269,7 @@
                   <Event Index="0" />
                   <Event Index="1" />
                   <Event Index="2" />
-                  <Event Index="3" />
+                  <Event Index="3">iYellowCitrcStone_UseInv</Event>
                   <Event Index="4" />
                 </Interactions>
               </InventoryItem>
@@ -2299,6 +2299,60 @@
                 <ID>5</ID>
                 <Image>57</Image>
                 <Name>iDryP_Rock</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties />
+                <Interactions>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>62</CursorImage>
+                <Description xml:space="preserve">Empty Jug</Description>
+                <HotspotX>1</HotspotX>
+                <HotspotY>1</HotspotY>
+                <ID>6</ID>
+                <Image>62</Image>
+                <Name>iEmptyJug</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties />
+                <Interactions>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>61</CursorImage>
+                <Description xml:space="preserve">Unpurified Water</Description>
+                <HotspotX>1</HotspotX>
+                <HotspotY>1</HotspotY>
+                <ID>7</ID>
+                <Image>61</Image>
+                <Name>iJugUnpurifiedWater</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties />
+                <Interactions>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3">iJugUnpurifiedWater_UseInv</Event>
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>60</CursorImage>
+                <Description xml:space="preserve">Clean Water</Description>
+                <HotspotX>1</HotspotX>
+                <HotspotY>1</HotspotY>
+                <ID>8</ID>
+                <Image>60</Image>
+                <Name>iJugCleanWater</Name>
                 <PlayerStartsWithItem>False</PlayerStartsWithItem>
                 <Properties />
                 <Interactions>
@@ -3044,6 +3098,44 @@ stop
                     </DialogOptions>
                   </Dialog>
                   <Dialog>
+                    <ID>8</ID>
+                    <Name>dRockCreature01_Rock</Name>
+                    <ShowTextParser>False</ShowTextParser>
+                    <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+cRockCreature01: Oh hey, it's you. Did you find what you were looking for?
+cJoel: Sort of.
+cJoel: I found a liquid that seems to be water, but it's not drinkable in its current state.
+cRockCreature01: (Hmm... what could that mean?)
+cJoel: I talked to somebody else, and they said I had to purify the liquid.
+cRockCreature01: Ah, it's those kinds of liquids.
+cJoel: Hm?
+cRockCreature01: By chance, did the other individual tell you need a Yellow Citrc Stone?
+cJoel: Why yes! I needed the stone to purify the water. The thing is, I don't have anything to get the stone.
+
+cRockCreature01: Oh, I see. I may have something that could help you.
+cJoel: What would that be?
+cRockCreature01: It's a rock, but that won't be good enough on its own to break it.
+cRockCreature01: Maybe if you give me something else with it, I can turn it into an actual tool.
+cJoel: Like a hammer?
+cRockCreature01:Yeah, that will work.
+cRockCreature01: (I don't know what a hammer is...)
+cJoel: Oh okay, thanks. I'll see what I can do.
+
+  //Script
+  cJoel.AddInventory(iDryP_Rock);
+  aSci_Fi_Fast_Good_Bleep.Play();
+  Display("Joel got a Rock!");
+return
+]]></Script>
+                    <DialogOptions />
+                  </Dialog>
+                </Dialogs>
+              </DialogFolder>
+              <DialogFolder Name="Dry Planet ~ SW Location">
+                <SubFolders />
+                <Dialogs>
+                  <Dialog>
                     <ID>7</ID>
                     <Name>dRC_Merchant_Reminder</Name>
                     <ShowTextParser>False</ShowTextParser>
@@ -3090,34 +3182,49 @@ stop
                     </DialogOptions>
                   </Dialog>
                   <Dialog>
-                    <ID>8</ID>
-                    <Name>dRockCreature01_Rock</Name>
+                    <ID>9</ID>
+                    <Name>dRC_Merchant_Water</Name>
                     <ShowTextParser>False</ShowTextParser>
                     <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-cRockCreature01: Oh hey, it's you. Did you find what you were looking for?
-cJoel: Sort of.
-cJoel: I found a liquid that seems to be water, but it's not drinkable in its current state.
-cRockCreature01: (Hmm... what could that mean?)
-cJoel: I talked to somebody else, and they said I had to purify the liquid.
-cRockCreature01: Ah, it's those kinds of liquids.
-cJoel: Hm?
-cRockCreature01: By chance, did the other individual tell you need a Yellow Citrc Stone?
-cJoel: Why yes! I needed the stone to purify the water. The thing is, I don't have anything to get the stone.
+cJoel: Hey!
 
-cRockCreature01: Oh, I see. I may have something that could help you.
-cJoel: What would that be?
-cRockCreature01: It's a rock, but that won't be good enough on its own to break it.
-cRockCreature01: Maybe if you give me something else with it, I can turn it into an actual tool.
-cJoel: Like a hammer?
-cRockCreature01:Yeah, that will work.
-cRockCreature01: (I don't know what a hammer is...)
-cJoel: Oh okay, thanks. I'll see what I can do.
+cRC_Merchant: Oh, it's you, did you find the stone?
+cJoel: Yeah, I did, but I have no idea what to do with it
+cRC_Merchant: It's quite simple. But let me tell you this first...
+cRC_Merchant: That stone is not going to be enough to purify a hole puddle. 
+cRC_Merchant: It's better if you scoop a certain amount of the liquid and then use it
+cJoel: Umm... I don't really have anything to store the water... Do you have anything?
+cRC_Merchant: I do. I have a big jug. 
+cJoel: Can I have it?
 
-  //Script
-  cJoel.AddInventory(iDryP_Rock);
+cRC_Merchant: Hmm... I'm not sure. I'll be willing to trade something for it...
+cJoel: Like what?
+cRC_Merchant: I've been traveling around the planet lately, and there's been a lot of debris and rocks all over the place.
+cRC_Merchant: So having some kind of tool to traverse around and break those would be kind of nice.
+cJoel: (I mean, the only thing I have is a hammer... but I just got that...)
+cJoel: (I do need the water, though...)
+cJoel: (*Sigh...*)
+cJoel: Would you be willing to trade if I give you a hammer?
+cRC_Merchant: Hammer? Is it a big thing at the top and a stick at the bottom?
+cJoel: Yeah, that...
+cRC_Merchant: That'll be perfect! That is exactly what I need.
+  
+  // Trading in the Hammer for the Empty Jug!
+  cJoel.LoseInventory(iDryP_Hammer);
+  cJoel.AddInventory(iEmptyJug);
   aSci_Fi_Fast_Good_Bleep.Play();
-  Display("Joel got a Rock!");
+  Display("Joel traded his Hammer for a Jug.");
+  
+
+cJoel: Okay, so what do I do with the stone?
+cRC_Merchant: It's quite simple, actually.
+cRC_Merchant: All you have to do is fill the jug with the liquid and put the Yellow Citrc Stone in it...
+cRC_Merchant: ...and it should purify it.
+cJoel: Sounds simple enough. I'll give it a shot.
+  ////Var Joel_Expedition to -> 6
+  Joel_Expedition = 6;
+  
 return
 ]]></Script>
                     <DialogOptions />
@@ -3590,11 +3697,16 @@ return
           <SpriteFolder Name="Defaults">
             <SubFolders>
               <SpriteFolder Name="Verbs">
-                <SubFolders />
+                <SubFolders>
+                  <SpriteFolder Name="Sci-Fi Verbs">
+                    <SubFolders />
+                    <Sprites />
+                  </SpriteFolder>
+                </SubFolders>
                 <Sprites>
                   <Sprite Slot="2100" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Sprites/Defaults/Verbs/btn_walk_normal.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Walk/Walk ~ Normal.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -3609,7 +3721,7 @@ return
                   </Sprite>
                   <Sprite Slot="2101" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Sprites/Defaults/Verbs/btn_walk_over.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Walk/Walk ~ Highlighted.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -3624,7 +3736,7 @@ return
                   </Sprite>
                   <Sprite Slot="2102" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Sprites/Defaults/Verbs/btn_walk_pressed.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Walk/Walk ~ Pressed.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -3654,7 +3766,7 @@ return
                   </Sprite>
                   <Sprite Slot="2104" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Sprites/Defaults/Verbs/btn_look_normal.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Search/Search ~ Normal.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -3669,7 +3781,7 @@ return
                   </Sprite>
                   <Sprite Slot="2105" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Sprites/Defaults/Verbs/btn_look_over.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Search/Search ~ Highlighted.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -3684,7 +3796,7 @@ return
                   </Sprite>
                   <Sprite Slot="2106" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Sprites/Defaults/Verbs/btn_look_pressed.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Search/Search ~ Pressed.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -3714,7 +3826,7 @@ return
                   </Sprite>
                   <Sprite Slot="2108" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Sprites/Defaults/Verbs/btn_interact_normal.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Interact/Interact ~ Normal02.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -3729,7 +3841,7 @@ return
                   </Sprite>
                   <Sprite Slot="2109" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Sprites/Defaults/Verbs/btn_interact_over.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Interact/Interact ~ Highlighted02.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -3744,7 +3856,7 @@ return
                   </Sprite>
                   <Sprite Slot="2110" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Sprites/Defaults/Verbs/btn_interact_pressed.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Interact/Interact ~ Pressed02.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -3774,7 +3886,7 @@ return
                   </Sprite>
                   <Sprite Slot="2112" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Sprites/Defaults/Verbs/btn_talk_normal.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Talk/Talk ~ Normal.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -3789,7 +3901,7 @@ return
                   </Sprite>
                   <Sprite Slot="2113" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Sprites/Defaults/Verbs/btn_talk_over.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Talk/Talk ~ Highlighted.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -3804,7 +3916,7 @@ return
                   </Sprite>
                   <Sprite Slot="2114" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Sprites/Defaults/Verbs/btn_talkj_pressed.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Talk/Talk ~ Pressed.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -3894,7 +4006,7 @@ return
                   </Sprite>
                   <Sprite Slot="2120" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Sprites/Defaults/Verbs/btn_inventory_normal.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Inventory/Inv ~ Normal.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -3909,7 +4021,7 @@ return
                   </Sprite>
                   <Sprite Slot="2121" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Sprites/Defaults/Verbs/btn_inventory_over.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Inventory/Inv ~ Highlighted.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -3924,7 +4036,7 @@ return
                   </Sprite>
                   <Sprite Slot="2122" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Sprites/Defaults/Verbs/btn_inventory_pressed.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Inventory/Inv ~ Pressed.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -3954,7 +4066,7 @@ return
                   </Sprite>
                   <Sprite Slot="2124" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Sprites/Defaults/Verbs/btn_empty_normal.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Blank/Blank ~ Normal.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -3969,7 +4081,7 @@ return
                   </Sprite>
                   <Sprite Slot="2126" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Sprites/Defaults/Verbs/btn_empty_pressed.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Blank/Blank ~ Pressed.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -3999,7 +4111,7 @@ return
                   </Sprite>
                   <Sprite Slot="2128" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Sprites/Defaults/Verbs/btn_save_normal.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Save/Save ~ Normal.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -4014,7 +4126,7 @@ return
                   </Sprite>
                   <Sprite Slot="2129" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Sprites/Defaults/Verbs/btn_save_over.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Save/Save ~ Highlighted.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -4029,7 +4141,7 @@ return
                   </Sprite>
                   <Sprite Slot="2130" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Sprites/Defaults/Verbs/btn_save_pressed.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Save/Save ~ Pressed.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -4059,7 +4171,7 @@ return
                   </Sprite>
                   <Sprite Slot="2132" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Sprites/Defaults/Verbs/btn_load_normal.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Load/Load ~ Normal.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -4074,7 +4186,7 @@ return
                   </Sprite>
                   <Sprite Slot="2133" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Sprites/Defaults/Verbs/btn_load_over.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Load/Load ~ Highlighted.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -4089,7 +4201,7 @@ return
                   </Sprite>
                   <Sprite Slot="2134" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Sprites/Defaults/Verbs/btn_load_pressed.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Load/Load ~ Pressed.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -4119,7 +4231,7 @@ return
                   </Sprite>
                   <Sprite Slot="2136" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Sprites/Defaults/Verbs/btn_settings_normal.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Settings/Setting ~ Normal.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -4134,7 +4246,7 @@ return
                   </Sprite>
                   <Sprite Slot="2137" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Sprites/Defaults/Verbs/btn_settings_over.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Settings/Setting ~ Highlighted.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -4149,7 +4261,7 @@ return
                   </Sprite>
                   <Sprite Slot="2138" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Sprites/Defaults/Verbs/btn_settings_pressed.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Settings/Settings ~ Pressed.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -4179,7 +4291,7 @@ return
                   </Sprite>
                   <Sprite Slot="2140" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Sprites/Defaults/Verbs/btn_quit_normal.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Exit Game/Exit Game ~ Normal.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -4194,7 +4306,7 @@ return
                   </Sprite>
                   <Sprite Slot="2141" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Sprites/Defaults/Verbs/btn_quit_over.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Exit Game/Exit Game ~ Highlighted.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -4209,7 +4321,7 @@ return
                   </Sprite>
                   <Sprite Slot="2142" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Sprites/Defaults/Verbs/btn_quit_pressed.png</FileName>
+                      <FileName>Assets/Sprites/Verbs or Buttons/Sci-Fi/Exit Game/Exit Game ~ Pressed.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -4832,6 +4944,71 @@ return
                       <Sprite Slot="58" Width="20" Height="21" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                         <Source>
                           <FileName>Assets/Sprites/Items/Hammer/Hammer.png</FileName>
+                          <OffsetX>0</OffsetX>
+                          <OffsetY>0</OffsetY>
+                          <ImportHeight>21</ImportHeight>
+                          <ImportWidth>20</ImportWidth>
+                          <ImportAsTile>False</ImportAsTile>
+                          <Frame>0</Frame>
+                          <RemapToGamePalette>False</RemapToGamePalette>
+                          <RemapToRoomPalette>False</RemapToRoomPalette>
+                          <ImportMethod>LeaveAsIs</ImportMethod>
+                          <ImportAlphaChannel>True</ImportAlphaChannel>
+                        </Source>
+                      </Sprite>
+                    </Sprites>
+                  </SpriteFolder>
+                  <SpriteFolder Name="Jug/Bottle">
+                    <SubFolders />
+                    <Sprites>
+                      <Sprite Slot="59" Width="20" Height="21" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                        <Source>
+                          <FileName>Assets/Sprites/Items/Jug Or Bottle/Jug (Glow).png</FileName>
+                          <OffsetX>0</OffsetX>
+                          <OffsetY>0</OffsetY>
+                          <ImportHeight>21</ImportHeight>
+                          <ImportWidth>20</ImportWidth>
+                          <ImportAsTile>False</ImportAsTile>
+                          <Frame>0</Frame>
+                          <RemapToGamePalette>False</RemapToGamePalette>
+                          <RemapToRoomPalette>False</RemapToRoomPalette>
+                          <ImportMethod>LeaveAsIs</ImportMethod>
+                          <ImportAlphaChannel>True</ImportAlphaChannel>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="60" Width="20" Height="21" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                        <Source>
+                          <FileName>Assets/Sprites/Items/Jug Or Bottle/Jug wClean Water.png</FileName>
+                          <OffsetX>0</OffsetX>
+                          <OffsetY>0</OffsetY>
+                          <ImportHeight>21</ImportHeight>
+                          <ImportWidth>20</ImportWidth>
+                          <ImportAsTile>False</ImportAsTile>
+                          <Frame>0</Frame>
+                          <RemapToGamePalette>False</RemapToGamePalette>
+                          <RemapToRoomPalette>False</RemapToRoomPalette>
+                          <ImportMethod>LeaveAsIs</ImportMethod>
+                          <ImportAlphaChannel>True</ImportAlphaChannel>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="61" Width="20" Height="21" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                        <Source>
+                          <FileName>Assets/Sprites/Items/Jug Or Bottle/Jug wDirty Water.png</FileName>
+                          <OffsetX>0</OffsetX>
+                          <OffsetY>0</OffsetY>
+                          <ImportHeight>21</ImportHeight>
+                          <ImportWidth>20</ImportWidth>
+                          <ImportAsTile>False</ImportAsTile>
+                          <Frame>0</Frame>
+                          <RemapToGamePalette>False</RemapToGamePalette>
+                          <RemapToRoomPalette>False</RemapToRoomPalette>
+                          <ImportMethod>LeaveAsIs</ImportMethod>
+                          <ImportAlphaChannel>True</ImportAlphaChannel>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="62" Width="20" Height="21" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                        <Source>
+                          <FileName>Assets/Sprites/Items/Jug Or Bottle/Jug.png</FileName>
                           <OffsetX>0</OffsetX>
                           <OffsetY>0</OffsetY>
                           <ImportHeight>21</ImportHeight>
