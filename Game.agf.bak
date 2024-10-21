@@ -2873,12 +2873,16 @@ cJoel: I recommend you ask Tyler about it. I kind of forgot mostly what he said.
 cZeno: So you didn't check the ship? You only got the report from Tyler?
 cJoel: No, it's just Tyler explains it better than I.
 cZeno: (Sure buddy...)
+
 return
 
 @2
 cJoel: They all seem to me fine.
 cJoel: Ana is in her room and the other two are in the cockpit.
 cZeno: Thanks, I'll see what the others are up to.
+////Var Main_SS_Into to -> +1
+  Main_SS_Intro += 1;
+option-off 2
 stop
 ]]></Script>
                 <DialogOptions>
@@ -3050,6 +3054,9 @@ cRockCreature01: Well, you're currently located at the center of the planet.
 cRockCreature01: So... maybe go Southwest from here? I think we have a couple of lakes there.
 cJoel: Sweet, thank you!
 cRockCreature01: Happy to help! If you need anything from me, just ask.
+
+cJoel: (Hmm... It might easier if I treval in my ship instead of walking...)
+cJoel: (Gota save as much enegry as I can.)
 return
 ]]></Script>
                     <DialogOptions />
@@ -3068,6 +3075,10 @@ cRockCreature01: There are many different places you can go that will have water
 cRockCreature01: Hmm... We're currently at the center of the planet...
 cRockCreature01: If I had to suggest a more specific location...
 cRockCreature01: I would say try going Southwest from here. There should be a couple of lakes there.
+
+//Hint to travel though your ship
+cJoel: (I should probaly treval around with my ship instead of walking...)
+cJoel: (I'll be covering more ground that way.)
 
 return
 @2
@@ -3687,6 +3698,11 @@ return
         <GlobalVariable>
           <DefaultValue />
           <Name>Joel_Expedition</Name>
+          <Type>int</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <DefaultValue />
+          <Name>Main_SS_Intro</Name>
           <Type>int</Type>
         </GlobalVariable>
       </Variables>
