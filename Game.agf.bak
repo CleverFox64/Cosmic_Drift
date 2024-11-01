@@ -2853,24 +2853,53 @@
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
+
+  Zeno_Talking_Start();
 cZeno: How's it going, Joel?
+  cZeno.UnlockView();
+  
 cJoel: It's going alright.
 cJoel: I see that you woke up from your long nap.
+
+  Zeno_Talking_Start();
 cZeno: Was it really that long?
+  cZeno.UnlockView();
+  
+  
 cJoel: You slept for like 4 hours...
+
+  Zeno_Talking_Start();
 cZeno: Oh... well...
 cZeno: It was kind of tiresome preparing and beginning for this trip.
+  cZeno.UnlockView();
+  
 cJoel: No, I understand.
 cJoel: You seem pretty exhausted and stressed when we got assigned this mission.
+  
+  Zeno_Talking_Start();
 cZeno: Well, the company is not really in the best position, so it's kind of hard to be in a good mood...
 cZeno: But never mind that...
+  cZeno.UnlockView();
+
 return
 @1
+  Zeno_Talking_Start();
+cZeno: What have you been doing?
+  cZeno.UnlockView();
+  
 cJoel: I've been chilling, just been checking around the ship and making sure everything's all right.
+
+  Zeno_Talking_Start();
 cZeno: Is everything good?
+  cZeno.UnlockView();
+  
 cJoel: Yeah, everything seems to be fine.
 cJoel: I recommend you ask Tyler about it. I kind of forgot mostly what he said...
+
+  Zeno_Talking_Start();
 cZeno: So you didn't check the ship? You only got the report from Tyler?
+  cZeno.UnlockView();
+  
 cJoel: No, it's just Tyler explains it better than I.
 cZeno: (Sure buddy...)
 //Var MSSI_Joel to -> +1
@@ -2879,14 +2908,23 @@ option-off 1
 return
 
 @2
+  Zeno_Talking_Start();
+cZeno: How are the others?
+  cZeno.UnlockView();
+  
 cJoel: They all seem to me fine.
 cJoel: Ana is in her room and the other two are in the cockpit.
+
+  Zeno_Talking_Start();
 cZeno: Thanks, I'll see what the others are up to.
+  cZeno.UnlockView();
 
 //Segways into the other option dialogue. (IF MSSI_Joel == 0)
   if (MSSI_Joel == 0)
     {
+      Zeno_Talking_Start();
       cZeno.Say("But...");
+      cZeno.UnlockView();
     }
 
 //Var MSSI_Joel to -> +1
@@ -2898,13 +2936,13 @@ return
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Say>True</Say>
+                    <Say>False</Say>
                     <Show>True</Show>
                     <Text xml:space="preserve">What have you been doing?</Text>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Say>True</Say>
+                    <Say>False</Say>
                     <Show>True</Show>
                     <Text xml:space="preserve">How are the others?</Text>
                   </DialogOption>
@@ -5917,6 +5955,41 @@ return
                           </Sprite>
                         </Sprites>
                       </SpriteFolder>
+                      <SpriteFolder Name="Z.Talking">
+                        <SubFolders />
+                        <Sprites>
+                          <Sprite Slot="88" Width="25" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                            <Source>
+                              <FileName>Assets/Sprites/Characters/Zeno/Talking/Zeno_Talking0.png</FileName>
+                              <OffsetX>0</OffsetX>
+                              <OffsetY>0</OffsetY>
+                              <ImportHeight>50</ImportHeight>
+                              <ImportWidth>25</ImportWidth>
+                              <ImportAsTile>False</ImportAsTile>
+                              <Frame>0</Frame>
+                              <RemapToGamePalette>False</RemapToGamePalette>
+                              <RemapToRoomPalette>False</RemapToRoomPalette>
+                              <ImportMethod>LeaveAsIs</ImportMethod>
+                              <ImportAlphaChannel>True</ImportAlphaChannel>
+                            </Source>
+                          </Sprite>
+                          <Sprite Slot="89" Width="25" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                            <Source>
+                              <FileName>Assets/Sprites/Characters/Zeno/Talking/Zeno_Talking1.png</FileName>
+                              <OffsetX>0</OffsetX>
+                              <OffsetY>0</OffsetY>
+                              <ImportHeight>50</ImportHeight>
+                              <ImportWidth>25</ImportWidth>
+                              <ImportAsTile>False</ImportAsTile>
+                              <Frame>0</Frame>
+                              <RemapToGamePalette>False</RemapToGamePalette>
+                              <RemapToRoomPalette>False</RemapToRoomPalette>
+                              <ImportMethod>LeaveAsIs</ImportMethod>
+                              <ImportAlphaChannel>True</ImportAlphaChannel>
+                            </Source>
+                          </Sprite>
+                        </Sprites>
+                      </SpriteFolder>
                     </SubFolders>
                     <Sprites>
                       <Sprite Slot="41" Width="25" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
@@ -7047,122 +7120,153 @@ return
               </View>
             </Views>
           </ViewFolder>
+          <ViewFolder Name="Zeno">
+            <SubFolders />
+            <Views>
+              <View>
+                <ID>1</ID>
+                <Name>VZeno</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>41</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>42</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>2</ID>
+                        <Image>43</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>1</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>41</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>42</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>2</ID>
+                        <Image>43</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>2</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>41</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>42</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>2</ID>
+                        <Image>43</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>3</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>41</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>42</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>2</ID>
+                        <Image>43</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+              <View>
+                <ID>10</ID>
+                <Name>VZeno_Talking</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>88</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>89</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+            </Views>
+          </ViewFolder>
         </SubFolders>
         <Views>
-          <View>
-            <ID>1</ID>
-            <Name>VZeno</Name>
-            <Loops>
-              <Loop>
-                <ID>0</ID>
-                <RunNextLoop>False</RunNextLoop>
-                <Frames>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>0</ID>
-                    <Image>41</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>1</ID>
-                    <Image>42</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>2</ID>
-                    <Image>43</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                </Frames>
-              </Loop>
-              <Loop>
-                <ID>1</ID>
-                <RunNextLoop>False</RunNextLoop>
-                <Frames>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>0</ID>
-                    <Image>41</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>1</ID>
-                    <Image>42</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>2</ID>
-                    <Image>43</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                </Frames>
-              </Loop>
-              <Loop>
-                <ID>2</ID>
-                <RunNextLoop>False</RunNextLoop>
-                <Frames>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>0</ID>
-                    <Image>41</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>1</ID>
-                    <Image>42</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>2</ID>
-                    <Image>43</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                </Frames>
-              </Loop>
-              <Loop>
-                <ID>3</ID>
-                <RunNextLoop>False</RunNextLoop>
-                <Frames>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>0</ID>
-                    <Image>41</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>1</ID>
-                    <Image>42</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>2</ID>
-                    <Image>43</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                </Frames>
-              </Loop>
-            </Loops>
-          </View>
           <View>
             <ID>2</ID>
             <Name>VJoel</Name>
