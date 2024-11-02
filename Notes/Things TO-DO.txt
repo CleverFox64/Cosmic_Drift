@@ -1,0 +1,28 @@
+Comic Drift ~ To-Do List
+
+/=============== Goal ===============/
+
+The goal is to complete 2 puzzles one on each planet. (To scope down the game it's 2 puzzles instead of the full 4 or 5)
+
+- I had to scope down the game to two puzzles due to time. A full version of the game would have had four to five puzzles.
+For the sake of time in making this project for school it has to be cut in half and treated as a demo of the game. (Comic Drift)
+(Even though making a second puzzle is going to take some time...)
+
+- The second puzzle involves Tyler & Ana on the same planet.
+Tyler needs to land on the planet to find more fuel while exploring and realizes that Ana is in trouble.
+He needs to save her on a different part of the same planet.
+
+
+/=============== Things To Do Next/Add ===============/
+
+- Add the talking Sprites throughout the rest of the game (Playing as Joel)
+- Add more dialogue interactions in the inventory w/ items when you're searching them or combining them
+- Add more interactable hotspots throughout the world 
+
+
+
+/=============== Bugs/Fixes ===============/
+
+- Fix the other space members walking sprite (so the legs move up and down with the shoe)
+- Fix the Spacesuit so the helmet glass is the only one that transparent and the outer parts of the helmet isn't
+- 
