@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>25</AudioIndexer>
+      <AudioIndexer>30</AudioIndexer>
       <AutoMoveInWalkMode>True</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BuildTargets xml:space="preserve">Windows, Web</BuildTargets>
@@ -2542,7 +2542,7 @@
               <Character>
                 <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
                 <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
-                <AnimationDelay>4</AnimationDelay>
+                <AnimationDelay>12</AnimationDelay>
                 <BlinkingView>0</BlinkingView>
                 <Clickable>True</Clickable>
                 <DiagonalLoops>True</DiagonalLoops>
@@ -2551,7 +2551,7 @@
                 <IdleDelay>20</IdleDelay>
                 <IdleView>0</IdleView>
                 <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
-                <MovementSpeed>3</MovementSpeed>
+                <MovementSpeed>5</MovementSpeed>
                 <MovementSpeedX>0</MovementSpeedX>
                 <MovementSpeedY>0</MovementSpeedY>
                 <NormalView>9</NormalView>
@@ -2584,7 +2584,7 @@
               <Character>
                 <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
                 <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
-                <AnimationDelay>4</AnimationDelay>
+                <AnimationDelay>8</AnimationDelay>
                 <BlinkingView>0</BlinkingView>
                 <Clickable>True</Clickable>
                 <DiagonalLoops>True</DiagonalLoops>
@@ -2593,7 +2593,7 @@
                 <IdleDelay>20</IdleDelay>
                 <IdleView>0</IdleView>
                 <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
-                <MovementSpeed>3</MovementSpeed>
+                <MovementSpeed>9</MovementSpeed>
                 <MovementSpeedX>0</MovementSpeedX>
                 <MovementSpeedY>0</MovementSpeedY>
                 <NormalView>9</NormalView>
@@ -2969,23 +2969,51 @@ return
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
+  Zeno_Talking_Start();
 cZeno:  Hey, Ana, what's up!
+  cZeno.UnlockView();
+  
+  Ana_Talking_Start();
 cAna: Oh, Zeno, you're awake from your nap.
+  cAna.UnlockView();
+
+  Zeno_Talking_Start();
 Zeno: Yeah, I was pretty tired. It was definitely needed.
+  cZeno.UnlockView();
+  
+  Ana_Talking_Start();
 cAna: Well, before the trip, you seemed like you needed it, so I'm glad you feel a little better.
+  cAna.UnlockView();
+
 return
 @1
+  Zeno_Talking_Start();
+cZeno: What were you doing?
+  cZeno.UnlockView();
+
+  Ana_Talking_Start();
 cAna: I just came into my room to relax. 
 cAna: I was going to have some tea and read a book.
+  cAna.UnlockView();
+  Zeno_Talking_Start();
 cZeno: Oh, I didn't mean to interrupt you.
+  cZeno.UnlockView();
+  
+  Ana_Talking_Start();
 cAna: No, it's fine I was just about to get my tea.
+  cAna.UnlockView();
 
 //Segways into the other option dialogue. (IF MSSI_Ana == 1)
   if (MSSI_Ana == 1) {
     {
+      Zeno_Talking_Start();
       cZeno.Say("Well, I'll leave you to it, thanks for the info though!");
       cZeno.Say("I'll see what the others are doing.");
+      cZeno.UnlockView();
+      
+        Ana_Talking_Start();
       cAna.Say("Sounds good! Have Fun!");
+        cAna.UnlockView();
     }
   }
   
@@ -2996,10 +3024,17 @@ option-off 1
 
 return
 @2
+  Zeno_Talking_Start();
+cZeno: What were you doing?
+  cZeno.UnlockView();
+  
+  Ana_Talking_Start();
 cAna: They seemed fine when I last talked to them.
 cAna: I know that Joel was supposed to be checking up on the ship.
 cAna: I saw him and Tyler talking. Maybe it was related to that?
 cAna: Also, Emma was there too. But I think she was just on the control panel.
+  cAna.UnlockView();
+
 cZeno: (Classic Joel...)
 
 //Var MSSI_Ana to -> +1
@@ -3011,13 +3046,13 @@ return
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
-                    <Say>True</Say>
+                    <Say>False</Say>
                     <Show>True</Show>
                     <Text xml:space="preserve">What were you doing?</Text>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
-                    <Say>True</Say>
+                    <Say>False</Say>
                     <Show>True</Show>
                     <Text xml:space="preserve">How are the others?</Text>
                   </DialogOption>
@@ -3029,12 +3064,28 @@ return
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
+  
+  Emma_Talking_Start();
 cEmma: Hey! Zeno, how are you doing?
+  cEmma.UnlockView();
+  
+  Zeno_Talking_Start();
 cZeno: Doing well.
 cZeno: I just woke up and I was checking around to see how everybody was doing.
+  cZeno.UnlockView();
+
+  Emma_Talking_Start();
 cEmma: Oh yeah, you took a nap. How was that?
+  cEmma.UnlockView();
+
+  Zeno_Talking_Start();
 cZeno: Refreshing!
+  cZeno.UnlockView();
+  
+  Emma_Talking_Start();
 cEmma: Oh, that's good!
+  cEmma.UnlockView();
+
 return
 ]]></Script>
                 <DialogOptions />
@@ -3045,28 +3096,81 @@ return
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
+
+  Tyler_Talking_Start();
 cTyler: Oh, Zeno you're finally awake.
+  cTyler.UnlockView();
+  
+  Zeno_Talking_Start();
 cZeno: What do you mean "finally?"
+  cZeno.UnlockView();
+  
+  Tyler_Talking_Start();
 cTyler: You're sleeping for 4 hours when things need to be done.
+  cTyler.UnlockView();
+    
+  Zeno_Talking_Start();
 cZeno: Like what? I made sure everything was done before I took my nap.
+  cZeno.UnlockView();
+  
+  Tyler_Talking_Start();
 cTyler: Well, for one, the ship currently right now is going in the wrong direction.
+  cTyler.UnlockView();
+  
+  Zeno_Talking_Start();
 cZeno: Hold up! Let me stop you right there!
 cZeno: I made sure the ship was going in the right direction before I went to sleep.
+  cZeno.UnlockView();
+  
+  //Maybe have her walk into frame
+  cEmma.Walk(268, 174, eBlock, eWalkableAreas);
+  Emma_Talking_Start();
 cEmma: Yeah, Tyler I can attest to that.
+  cEmma.UnlockView();
+  
+  Tyler_Talking_Start();
 cTyler: Wait... We can?
+  cTyler.UnlockView();
+
+  Emma_Talking_Start();
 cEmma:  Yeah, Zeno mentioned it when we were having dinner. Were you not listening?
+  cEmma.UnlockView();
+  
 cTyler: (...)
+
+  Emma_Talking_Start();
 cEmma: You weren't listening, were you?
+  cEmma.UnlockView();
+  
+  Tyler_Talking_Start();
 cTyler: I was...
+  cTyler.UnlockView();
+  
+  Emma_Talking_Start();
 cEmma:  Sure about that?
+  cEmma.UnlockView();
+
 cTyler: (Yes..)
+  
+  Zeno_Talking_Start();
 cZeno: Look, I'm telling you, I did check that before I went to sleep.
+  cZeno.UnlockView();
+  
+  Tyler_Talking_Start();
 cTyler: Then who touch it then? Joel? Ana?
-//Maybe have her walk into frame
+  cTyler.UnlockView();
+
+  Emma_Talking_Start();
 cEmma: Ana was mostly around her room.
 cEmma: And Joel... was just being Joel...
-//Then walk back to her control panel
+  cEmma.UnlockView();
+
+//Then walks back to her control panel
+  cEmma.Walk(411, 177, eNoBlock, eWalkableAreas);
+  Tyler_Talking_Start();
 cTyler: *Sigh*
+  cTyler.UnlockView();
+  
 cZeno:  (I guess I'll check the front center control panel...)
 
 //Var MSSI_Tyler to -> +1
@@ -3081,32 +3185,80 @@ return
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-cZeno: ...
-cZeno: Huh...?
-cEmma: What is it?
-cTyler: See, I told you we're going in wrong direction!
-cZeno: No we actually going in the right direction.
 
+cZeno: ...
+
+  Zeno_Talking_Start();
+cZeno: Huh...?
+  cZeno.UnlockView();
+
+  Emma_Talking_Start();
+cEmma: What is it?
+  cEmma.UnlockView();
+  
+  Tyler_Talking_Start();
+cTyler: See, I told you we're going in wrong direction!
+  cTyler.UnlockView();
+  
+  Zeno_Talking_Start();
+cZeno: No we actually going in the right direction.
+  cZeno.UnlockView();
+  
+  Tyler_Talking_Start();
 cTyler: Huh???
 cTyler: But I could have sworn we were going in the wrong direction...
 cTyler: I didn't change the coordinates!?
+  cTyler.UnlockView();
+
+
+  Emma_Talking_Start();
 cEmma:  Are you sure?
+  cEmma.UnlockView();
+  
+  Tyler_Talking_Start();
 cTyler: Positive! When I glanced at the control panel something differently was different.
 cTyler: However, I was too busy checking around the ship, which Joe was supposed to do!
+  cTyler.UnlockView();
+  
+  Emma_Talking_Start();
 cEmma: Yeah ok...
+  cEmma.UnlockView();
 
+  Zeno_Talking_Start();
 cZeno: If Tyler says it's true, then who changed the coordinates?
+  cZeno.UnlockView();
+  
+  Tyler_Talking_Start();
 cTyler: Joel?
+  cTyler.UnlockView();
+  
+  Emma_Talking_Start();
 cEmma: Hey! You can't just blame Joe for everything!
+  cEmma.UnlockView();
+  
+  Tyler_Talking_Start();
 cTyler: But he's Joe...
+  cTyler.UnlockView();
+  
+  Zeno_Talking_Start();
 cZeno: What exactly is going on?
+  cZeno.UnlockView();
+  
 cZeno: (*Sigh...*)
 
 cEmma: ...
+  
+  Emma_Talking_Start();
 cEmma: Uh, guys... What's that in front of us!?
+  cEmma.UnlockView();
+  
+  Tyler_Talking_Start();
 cTyler: What the-
 cTyler: It's just DARKNESS!!!
+  cTyler.UnlockView();
+
 cZeno: (T-This is not good...)
+
 return
 ]]></Script>
                 <DialogOptions />
@@ -3137,31 +3289,84 @@ return
                     <ShowTextParser>False</ShowTextParser>
                     <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-cRockCreature01: Uhh???
-cJoel: Hello!
-cRockCreature01: H-hi...
-cJoel: Can you understand me?
-cRockCreature01: Why yes! How did you do that?
-cJoel: I have a little Gadget that helps me understand.
-cRockCreature01: How Cool!
 
+cRockCreature01: Uhh???
+
+  Joel_Talking_Start();
+cJoel: Hello!
+  cJoel.UnlockView();
+  
+  RC01_Talking_Start();
+cRockCreature01: H-hi...
+  cRockCreature01.UnlockView();
+
+  Joel_Talking_Start();
+cJoel: Can you understand me?
+  cJoel.UnlockView();
+  
+  RC01_Talking_Start();
+cRockCreature01: Why yes! How did you do that?
+  cRockCreature01.UnlockView();
+
+  Joel_Talking_Start();
+cJoel: I have a little Gadget that helps me understand.
+  cJoel.UnlockView();
+  
+  RC01_Talking_Start();
+cRockCreature01: How Cool!
+  cRockCreature01.UnlockView();
+  
+  Joel_Talking_Start();
 cJoel: See, I would love to chit-chat chat, but I'm kind of in an emergency.
+  cJoel.UnlockView();
+  
+  RC01_Talking_Start();
 cRockCreature01: Emergency?
+  cRockCreature01.UnlockView();
+  
+  Joel_Talking_Start();
 cJoel: Yeah, I'm all out of water...
+  cJoel.UnlockView();
+  
+  RC01_Talking_Start();
 cRockCreature01: Water... The liquid?
+  cRockCreature01.UnlockView();
+  
+  Joel_Talking_Start();
 cJoel: Yes, and I'm currently out of some.
 cJoel: I kind of need it for my body to sustain.
+  cJoel.UnlockView();
+  
+  RC01_Talking_Start();
 cRockCreature01: Mmm... I would let you into the town, but you kind of came onto our planet expectedly...
 cRockCreature01: I don't think it would boat well if you just randomly barge in...
-
+  cRockCreature01.UnlockView();
+  
+  Joel_Talking_Start();
 cJoel: Oh...
+  cJoel.UnlockView();
+  
+  RC01_Talking_Start();
 cRockCreature01: However, there are different places you can go that will have water.
+  cRockCreature01.UnlockView();
+  
+  Joel_Talking_Start();
 cJoel: Any suggestions?
+  cJoel.UnlockView();
+  
+  RC01_Talking_Start();
 cRockCreature01: Well, you're currently located at the center of the planet.
 cRockCreature01: So... maybe go Southwest from here? I think we have a couple of lakes there.
+  cRockCreature01.UnlockView();
+  
+  Joel_Talking_Start();
 cJoel: Sweet, thank you!
+  cJoel.UnlockView();
+  
+  RC01_Talking_Start();
 cRockCreature01: Happy to help! If you need anything from me, just ask.
-
+  cRockCreature01.UnlockView();
+  
 cJoel: (Hmm... It might easier if I treval in my ship instead of walking...)
 cJoel: (Gota save as much enegry as I can.)
 return
@@ -3174,30 +3379,47 @@ return
                     <ShowTextParser>False</ShowTextParser>
                     <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-cRockCreature01: Oh, It's you! How can I help you?
 
+  RC01_Talking_Start();
+cRockCreature01: Oh, It's you! How can I help you?
+  cRockCreature01.UnlockView();
+  
 return
 @1
+  Joel_Talking_Start();
+cJoel: Where should I go again?
+  cJoel.UnlockView();
+
+  RC01_Talking_Start();
 cRockCreature01: There are many different places you can go that will have water.
 cRockCreature01: Hmm... We're currently at the center of the planet...
 cRockCreature01: If I had to suggest a more specific location...
 cRockCreature01: I would say try going Southwest from here. There should be a couple of lakes there.
-
+  cRockCreature01.UnlockView();
+  
 //Hint to travel though your ship
 cJoel: (I should probaly treval around with my ship instead of walking...)
 cJoel: (I'll be covering more ground that way.)
 
 return
 @2
+
 return
 @3
+  Joel_Talking_Start();
+cJoel: I'm Good! See ya!
+  cJoel.UnlockView();
+
+  RC01_Talking_Start();
 cRockCreature01: See ya! Good luck finding what you need!
+  cRockCreature01.UnlockView();
+  
 stop
 ]]></Script>
                     <DialogOptions>
                       <DialogOption>
                         <ID>1</ID>
-                        <Say>True</Say>
+                        <Say>False</Say>
                         <Show>True</Show>
                         <Text xml:space="preserve">Where should I go again?</Text>
                       </DialogOption>
@@ -3209,7 +3431,7 @@ stop
                       </DialogOption>
                       <DialogOption>
                         <ID>3</ID>
-                        <Say>True</Say>
+                        <Say>False</Say>
                         <Show>True</Show>
                         <Text xml:space="preserve">I'm Good! See ya!</Text>
                       </DialogOption>
@@ -3221,25 +3443,63 @@ stop
                     <ShowTextParser>False</ShowTextParser>
                     <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
+
+  RC01_Talking_Start();
 cRockCreature01: Oh hey, it's you. Did you find what you were looking for?
+  cRockCreature01.UnlockView();
+  
+  Joel_Talking_Start();
 cJoel: Sort of.
 cJoel: I found a liquid that seems to be water, but it's not drinkable in its current state.
-cRockCreature01: (Hmm... what could that mean?)
-cJoel: I talked to somebody else, and they said I had to purify the liquid.
-cRockCreature01: Ah, it's those kinds of liquids.
-cJoel: Hm?
-cRockCreature01: By chance, did the other individual tell you need a Yellow Citrc Stone?
-cJoel: Why yes! I needed the stone to purify the water. The thing is, I don't have anything to get the stone.
+  cJoel.UnlockView();
 
+cRockCreature01: (Hmm... what could that mean?)
+
+  Joel_Talking_Start();
+cJoel: I talked to somebody else, and they said I had to purify the liquid.
+  cJoel.UnlockView();
+
+  RC01_Talking_Start();
+cRockCreature01: Ah, it's those kinds of liquids.
+  cRockCreature01.UnlockView();
+
+cJoel: Hm?
+
+  RC01_Talking_Start();
+cRockCreature01: By chance, did the other individual tell you need a Yellow Citrc Stone?
+  cRockCreature01.UnlockView();
+  
+  Joel_Talking_Start();
+cJoel: Why yes! I needed the stone to purify the water. The thing is, I don't have anything to get the stone.
+  cJoel.UnlockView();
+
+  RC01_Talking_Start();
 cRockCreature01: Oh, I see. I may have something that could help you.
+  cRockCreature01.UnlockView();
+
+  Joel_Talking_Start();
 cJoel: What would that be?
+  cJoel.UnlockView();
+  
+  RC01_Talking_Start();
 cRockCreature01: It's a rock, but that won't be good enough on its own to break it.
 cRockCreature01: Maybe if you give me something else with it, I can turn it into an actual tool.
+  cRockCreature01.UnlockView();
+  
+  Joel_Talking_Start();
 cJoel: Like a hammer?
+  cJoel.UnlockView();
+  
+  RC01_Talking_Start();
 cRockCreature01:Yeah, that will work.
-cRockCreature01: (I don't know what a hammer is...)
-cJoel: Oh okay, thanks. I'll see what I can do.
+  cRockCreature01.UnlockView();
 
+cRockCreature01: (I don't know what a hammer is...)
+
+  Joel_Talking_Start();
+cJoel: Oh okay, thanks. I'll see what I can do.
+  cJoel.UnlockView();
+  
   //Script
   cJoel.AddInventory(iDryP_Rock);
   aSci_Fi_Fast_Good_Bleep.Play();
@@ -3259,29 +3519,54 @@ return
                     <ShowTextParser>False</ShowTextParser>
                     <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
+
+  RC_Merchant_Talking_Start();
 cRC_Merchant: Oh, it's you again. Jump the gun creature!
+  cRC_Merchant.UnlockView();
+  
 cJoel: (...)
+  
+  RC_Merchant_Talking_Start();
 cRC_Merchant: How can I help you?
+  cRC_Merchant.UnlockView();
 
 return
 @1
+  
+  Joel_Talking_Start();
+cJoel: How do I purify the liquid again?
+  cJoel.UnlockView();
+
+  RC_Merchant_Talking_Start();
 cRC_Merchant: You need to find Yellow Citrc Stone.
 cRC_Merchant: There usually located around dark purple areas on the planet.
 cRC_Merchant: They're engraved in rocks near there.
 cRC_Merchant: You might need something that can break it to get it.
+  cRC_Merchant.UnlockView();
 
 return
 @2
 return
 @3
+  
+  Joel_Talking_Start();
+cJoel: I'm Good, Thank you!
+  cJoel.UnlockView();
+
+  RC_Merchant_Talking_Start();
 cRC_Merchant: Good luck on your journey. Remember to be mindful of your surroundings...
+  cRC_Merchant.UnlockView();
+  
+  Joel_Talking_Start();
 cJoel: Haha... Will do.
+  cJoel.UnlockView();
+
 stop
 ]]></Script>
                     <DialogOptions>
                       <DialogOption>
                         <ID>1</ID>
-                        <Say>True</Say>
+                        <Say>False</Say>
                         <Show>True</Show>
                         <Text xml:space="preserve">How do I purify the liquid again?</Text>
                       </DialogOption>
@@ -3293,7 +3578,7 @@ stop
                       </DialogOption>
                       <DialogOption>
                         <ID>3</ID>
-                        <Say>True</Say>
+                        <Say>False</Say>
                         <Show>True</Show>
                         <Text xml:space="preserve">I'm Good, Thank you!</Text>
                       </DialogOption>
@@ -3305,28 +3590,69 @@ stop
                     <ShowTextParser>False</ShowTextParser>
                     <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-cJoel: Hey!
 
+  Joel_Talking_Start();
+cJoel: Hey!
+  cJoel.UnlockView();
+
+  RC_Merchant_Talking_Start();
 cRC_Merchant: Oh, it's you, did you find the stone?
+  cRC_Merchant.UnlockView();
+  
+  Joel_Talking_Start();
 cJoel: Yeah, I did, but I have no idea what to do with it
+  cJoel.UnlockView();
+
+  RC_Merchant_Talking_Start();
 cRC_Merchant: It's quite simple. But let me tell you this first...
 cRC_Merchant: That stone is not going to be enough to purify a hole puddle. 
 cRC_Merchant: It's better if you scoop a certain amount of the liquid and then use it
-cJoel: Umm... I don't really have anything to store the water... Do you have anything?
-cRC_Merchant: I do. I have a big jug. 
-cJoel: Can I have it?
+  cRC_Merchant.UnlockView();
 
+  Joel_Talking_Start();
+cJoel: Umm... I don't really have anything to store the water... Do you have anything?
+  cJoel.UnlockView();
+
+  RC_Merchant_Talking_Start();
+cRC_Merchant: I do. I have a big jug.
+  cRC_Merchant.UnlockView();
+  
+  Joel_Talking_Start();
+cJoel: Can I have it?
+  cJoel.UnlockView();
+
+  RC_Merchant_Talking_Start();
 cRC_Merchant: Hmm... I'm not sure. I'll be willing to trade something for it...
+  cRC_Merchant.UnlockView();
+  
+  Joel_Talking_Start();
 cJoel: Like what?
+  cJoel.UnlockView();
+  
+  RC_Merchant_Talking_Start();
 cRC_Merchant: I've been traveling around the planet lately, and there's been a lot of debris and rocks all over the place.
 cRC_Merchant: So having some kind of tool to traverse around and break those would be kind of nice.
+  cRC_Merchant.UnlockView();
+  
 cJoel: (I mean, the only thing I have is a hammer... but I just got that...)
 cJoel: (I do need the water, though...)
 cJoel: (*Sigh...*)
+
+  Joel_Talking_Start();
 cJoel: Would you be willing to trade if I give you a hammer?
+  cJoel.UnlockView();
+
+  RC_Merchant_Talking_Start();
 cRC_Merchant: Hammer? Is it a big thing at the top and a stick at the bottom?
+  cRC_Merchant.UnlockView();
+  
+  Joel_Talking_Start();
 cJoel: Yeah, that...
+  cJoel.UnlockView();
+  
+  RC_Merchant_Talking_Start();
 cRC_Merchant: That'll be perfect! That is exactly what I need.
+  cRC_Merchant.UnlockView();
   
   // Trading in the Hammer for the Empty Jug!
   cJoel.LoseInventory(iDryP_Hammer);
@@ -3334,12 +3660,20 @@ cRC_Merchant: That'll be perfect! That is exactly what I need.
   aSci_Fi_Fast_Good_Bleep.Play();
   Display("Joel traded his Hammer for a Jug.");
   
-
+  Joel_Talking_Start();
 cJoel: Okay, so what do I do with the stone?
+  cJoel.UnlockView();
+  
+  RC_Merchant_Talking_Start();
 cRC_Merchant: It's quite simple, actually.
 cRC_Merchant: All you have to do is fill the jug with the liquid and put the Yellow Citrc Stone in it...
 cRC_Merchant: ...and it should purify it.
+  cRC_Merchant.UnlockView();
+
+  Joel_Talking_Start();
 cJoel: Sounds simple enough. I'll give it a shot.
+  cJoel.UnlockView();
+
   ////Var Joel_Expedition to -> 6
   Joel_Expedition = 6;
   
@@ -5942,7 +6276,7 @@ return
                         <Sprites>
                           <Sprite Slot="42" Width="25" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Sprites/Characters/Zeno/Walking/Zeno_Walking0.png</FileName>
+                              <FileName>Assets/Sprites/Characters/Space Crew Members/Zeno/Walking/Zeno_Walking0.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>50</ImportHeight>
@@ -5957,7 +6291,7 @@ return
                           </Sprite>
                           <Sprite Slot="43" Width="25" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Sprites/Characters/Zeno/Walking/Zeno_Walking1.png</FileName>
+                              <FileName>Assets/Sprites/Characters/Space Crew Members/Zeno/Walking/Zeno_Walking1.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>50</ImportHeight>
@@ -6033,7 +6367,7 @@ return
                         <Sprites>
                           <Sprite Slot="90" Width="25" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Sprites/Characters/Joel/Walking/Joel_Walking0.png</FileName>
+                              <FileName>Assets/Sprites/Characters/Space Crew Members/Joel/Walking/Joel_Walking0.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>50</ImportHeight>
@@ -6048,7 +6382,7 @@ return
                           </Sprite>
                           <Sprite Slot="91" Width="25" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Sprites/Characters/Joel/Walking/Joel_Walking1.png</FileName>
+                              <FileName>Assets/Sprites/Characters/Space Crew Members/Joel/Walking/Joel_Walking1.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>50</ImportHeight>
@@ -6124,7 +6458,7 @@ return
                         <Sprites>
                           <Sprite Slot="94" Width="25" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Sprites/Characters/Tyler/Walking/Tyler_Walking0.png</FileName>
+                              <FileName>Assets/Sprites/Characters/Space Crew Members/Tyler/Walking/Tyler_Walking0.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>50</ImportHeight>
@@ -6139,7 +6473,7 @@ return
                           </Sprite>
                           <Sprite Slot="95" Width="25" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Sprites/Characters/Tyler/Walking/Tyler_Walking1.png</FileName>
+                              <FileName>Assets/Sprites/Characters/Space Crew Members/Tyler/Walking/Tyler_Walking1.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>50</ImportHeight>
@@ -6215,7 +6549,7 @@ return
                         <Sprites>
                           <Sprite Slot="98" Width="25" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Sprites/Characters/Ana/Walking/Ana_Walking0.png</FileName>
+                              <FileName>Assets/Sprites/Characters/Space Crew Members/Ana/Walking/Ana_Walking0.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>50</ImportHeight>
@@ -6230,7 +6564,7 @@ return
                           </Sprite>
                           <Sprite Slot="99" Width="25" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Sprites/Characters/Ana/Walking/Ana_Walking1.png</FileName>
+                              <FileName>Assets/Sprites/Characters/Space Crew Members/Ana/Walking/Ana_Walking1.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>50</ImportHeight>
@@ -6306,7 +6640,7 @@ return
                         <Sprites>
                           <Sprite Slot="102" Width="25" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Sprites/Characters/Emma/Walking/Emma_Walking0.png</FileName>
+                              <FileName>Assets/Sprites/Characters/Space Crew Members/Emma/Walking/Emma_Walking0.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>50</ImportHeight>
@@ -6321,7 +6655,7 @@ return
                           </Sprite>
                           <Sprite Slot="103" Width="25" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Sprites/Characters/Emma/Walking/Emma_Walking1.png</FileName>
+                              <FileName>Assets/Sprites/Characters/Space Crew Members/Emma/Walking/Emma_Walking1.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>50</ImportHeight>
@@ -6391,7 +6725,218 @@ return
                     </Sprites>
                   </SpriteFolder>
                   <SpriteFolder Name="Rock Creatures">
-                    <SubFolders />
+                    <SubFolders>
+                      <SpriteFolder Name="RC_Crafting">
+                        <SubFolders />
+                        <Sprites>
+                          <Sprite Slot="127" Width="50" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                            <Source>
+                              <FileName>Assets/Sprites/Characters/Rock Creatures/Rock_Creature Crafting/Tilting Left &amp; Right/v2 (Gear Opacity Changed)/RC_Crafting_LR0.png</FileName>
+                              <OffsetX>0</OffsetX>
+                              <OffsetY>0</OffsetY>
+                              <ImportHeight>50</ImportHeight>
+                              <ImportWidth>50</ImportWidth>
+                              <ImportAsTile>False</ImportAsTile>
+                              <Frame>0</Frame>
+                              <RemapToGamePalette>False</RemapToGamePalette>
+                              <RemapToRoomPalette>False</RemapToRoomPalette>
+                              <ImportMethod>LeaveAsIs</ImportMethod>
+                              <ImportAlphaChannel>True</ImportAlphaChannel>
+                            </Source>
+                          </Sprite>
+                          <Sprite Slot="128" Width="50" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                            <Source>
+                              <FileName>Assets/Sprites/Characters/Rock Creatures/Rock_Creature Crafting/Tilting Left &amp; Right/v2 (Gear Opacity Changed)/RC_Crafting_LR1.png</FileName>
+                              <OffsetX>0</OffsetX>
+                              <OffsetY>0</OffsetY>
+                              <ImportHeight>50</ImportHeight>
+                              <ImportWidth>50</ImportWidth>
+                              <ImportAsTile>False</ImportAsTile>
+                              <Frame>0</Frame>
+                              <RemapToGamePalette>False</RemapToGamePalette>
+                              <RemapToRoomPalette>False</RemapToRoomPalette>
+                              <ImportMethod>LeaveAsIs</ImportMethod>
+                              <ImportAlphaChannel>True</ImportAlphaChannel>
+                            </Source>
+                          </Sprite>
+                          <Sprite Slot="129" Width="50" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                            <Source>
+                              <FileName>Assets/Sprites/Characters/Rock Creatures/Rock_Creature Crafting/Tilting Left &amp; Right/v2 (Gear Opacity Changed)/RC_Crafting_LR2.png</FileName>
+                              <OffsetX>0</OffsetX>
+                              <OffsetY>0</OffsetY>
+                              <ImportHeight>50</ImportHeight>
+                              <ImportWidth>50</ImportWidth>
+                              <ImportAsTile>False</ImportAsTile>
+                              <Frame>0</Frame>
+                              <RemapToGamePalette>False</RemapToGamePalette>
+                              <RemapToRoomPalette>False</RemapToRoomPalette>
+                              <ImportMethod>LeaveAsIs</ImportMethod>
+                              <ImportAlphaChannel>True</ImportAlphaChannel>
+                            </Source>
+                          </Sprite>
+                          <Sprite Slot="130" Width="50" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                            <Source>
+                              <FileName>Assets/Sprites/Characters/Rock Creatures/Rock_Creature Crafting/Tilting Left &amp; Right/v2 (Gear Opacity Changed)/RC_Crafting_LR3.png</FileName>
+                              <OffsetX>0</OffsetX>
+                              <OffsetY>0</OffsetY>
+                              <ImportHeight>50</ImportHeight>
+                              <ImportWidth>50</ImportWidth>
+                              <ImportAsTile>False</ImportAsTile>
+                              <Frame>0</Frame>
+                              <RemapToGamePalette>False</RemapToGamePalette>
+                              <RemapToRoomPalette>False</RemapToRoomPalette>
+                              <ImportMethod>LeaveAsIs</ImportMethod>
+                              <ImportAlphaChannel>True</ImportAlphaChannel>
+                            </Source>
+                          </Sprite>
+                          <Sprite Slot="131" Width="50" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                            <Source>
+                              <FileName>Assets/Sprites/Characters/Rock Creatures/Rock_Creature Crafting/Tilting Left &amp; Right/v2 (Gear Opacity Changed)/RC_Crafting_LR4.png</FileName>
+                              <OffsetX>0</OffsetX>
+                              <OffsetY>0</OffsetY>
+                              <ImportHeight>50</ImportHeight>
+                              <ImportWidth>50</ImportWidth>
+                              <ImportAsTile>False</ImportAsTile>
+                              <Frame>0</Frame>
+                              <RemapToGamePalette>False</RemapToGamePalette>
+                              <RemapToRoomPalette>False</RemapToRoomPalette>
+                              <ImportMethod>LeaveAsIs</ImportMethod>
+                              <ImportAlphaChannel>True</ImportAlphaChannel>
+                            </Source>
+                          </Sprite>
+                          <Sprite Slot="132" Width="50" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                            <Source>
+                              <FileName>Assets/Sprites/Characters/Rock Creatures/Rock_Creature Crafting/Tilting Left &amp; Right/v2 (Gear Opacity Changed)/RC_Crafting_LR5.png</FileName>
+                              <OffsetX>0</OffsetX>
+                              <OffsetY>0</OffsetY>
+                              <ImportHeight>50</ImportHeight>
+                              <ImportWidth>50</ImportWidth>
+                              <ImportAsTile>False</ImportAsTile>
+                              <Frame>0</Frame>
+                              <RemapToGamePalette>False</RemapToGamePalette>
+                              <RemapToRoomPalette>False</RemapToRoomPalette>
+                              <ImportMethod>LeaveAsIs</ImportMethod>
+                              <ImportAlphaChannel>True</ImportAlphaChannel>
+                            </Source>
+                          </Sprite>
+                          <Sprite Slot="133" Width="50" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                            <Source>
+                              <FileName>Assets/Sprites/Characters/Rock Creatures/Rock_Creature Crafting/Tilting Left &amp; Right/v2 (Gear Opacity Changed)/RC_Crafting_LR6.png</FileName>
+                              <OffsetX>0</OffsetX>
+                              <OffsetY>0</OffsetY>
+                              <ImportHeight>50</ImportHeight>
+                              <ImportWidth>50</ImportWidth>
+                              <ImportAsTile>False</ImportAsTile>
+                              <Frame>0</Frame>
+                              <RemapToGamePalette>False</RemapToGamePalette>
+                              <RemapToRoomPalette>False</RemapToRoomPalette>
+                              <ImportMethod>LeaveAsIs</ImportMethod>
+                              <ImportAlphaChannel>True</ImportAlphaChannel>
+                            </Source>
+                          </Sprite>
+                          <Sprite Slot="134" Width="50" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                            <Source>
+                              <FileName>Assets/Sprites/Characters/Rock Creatures/Rock_Creature Crafting/Tilting Left &amp; Right/v2 (Gear Opacity Changed)/RC_Crafting_LR7.png</FileName>
+                              <OffsetX>0</OffsetX>
+                              <OffsetY>0</OffsetY>
+                              <ImportHeight>50</ImportHeight>
+                              <ImportWidth>50</ImportWidth>
+                              <ImportAsTile>False</ImportAsTile>
+                              <Frame>0</Frame>
+                              <RemapToGamePalette>False</RemapToGamePalette>
+                              <RemapToRoomPalette>False</RemapToRoomPalette>
+                              <ImportMethod>LeaveAsIs</ImportMethod>
+                              <ImportAlphaChannel>True</ImportAlphaChannel>
+                            </Source>
+                          </Sprite>
+                          <Sprite Slot="135" Width="50" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                            <Source>
+                              <FileName>Assets/Sprites/Characters/Rock Creatures/Rock_Creature Crafting/Tilting Left &amp; Right/v2 (Gear Opacity Changed)/RC_Crafting_LR8.png</FileName>
+                              <OffsetX>0</OffsetX>
+                              <OffsetY>0</OffsetY>
+                              <ImportHeight>50</ImportHeight>
+                              <ImportWidth>50</ImportWidth>
+                              <ImportAsTile>False</ImportAsTile>
+                              <Frame>0</Frame>
+                              <RemapToGamePalette>False</RemapToGamePalette>
+                              <RemapToRoomPalette>False</RemapToRoomPalette>
+                              <ImportMethod>LeaveAsIs</ImportMethod>
+                              <ImportAlphaChannel>True</ImportAlphaChannel>
+                            </Source>
+                          </Sprite>
+                        </Sprites>
+                      </SpriteFolder>
+                      <SpriteFolder Name="RC_Walking">
+                        <SubFolders />
+                        <Sprites>
+                          <Sprite Slot="136" Width="50" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                            <Source>
+                              <FileName>Assets/Sprites/Characters/Rock Creatures/Rock_Creature Walking/RC_Walking0.png</FileName>
+                              <OffsetX>0</OffsetX>
+                              <OffsetY>0</OffsetY>
+                              <ImportHeight>50</ImportHeight>
+                              <ImportWidth>50</ImportWidth>
+                              <ImportAsTile>False</ImportAsTile>
+                              <Frame>0</Frame>
+                              <RemapToGamePalette>False</RemapToGamePalette>
+                              <RemapToRoomPalette>False</RemapToRoomPalette>
+                              <ImportMethod>LeaveAsIs</ImportMethod>
+                              <ImportAlphaChannel>True</ImportAlphaChannel>
+                            </Source>
+                          </Sprite>
+                          <Sprite Slot="137" Width="50" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                            <Source>
+                              <FileName>Assets/Sprites/Characters/Rock Creatures/Rock_Creature Walking/RC_Walking1.png</FileName>
+                              <OffsetX>0</OffsetX>
+                              <OffsetY>0</OffsetY>
+                              <ImportHeight>50</ImportHeight>
+                              <ImportWidth>50</ImportWidth>
+                              <ImportAsTile>False</ImportAsTile>
+                              <Frame>0</Frame>
+                              <RemapToGamePalette>False</RemapToGamePalette>
+                              <RemapToRoomPalette>False</RemapToRoomPalette>
+                              <ImportMethod>LeaveAsIs</ImportMethod>
+                              <ImportAlphaChannel>True</ImportAlphaChannel>
+                            </Source>
+                          </Sprite>
+                        </Sprites>
+                      </SpriteFolder>
+                      <SpriteFolder Name="RC_Hopping">
+                        <SubFolders />
+                        <Sprites>
+                          <Sprite Slot="138" Width="50" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                            <Source>
+                              <FileName>Assets/Sprites/Characters/Rock Creatures/Rock_Creature Hopping/RC_Hopping0.png</FileName>
+                              <OffsetX>0</OffsetX>
+                              <OffsetY>0</OffsetY>
+                              <ImportHeight>50</ImportHeight>
+                              <ImportWidth>50</ImportWidth>
+                              <ImportAsTile>False</ImportAsTile>
+                              <Frame>0</Frame>
+                              <RemapToGamePalette>False</RemapToGamePalette>
+                              <RemapToRoomPalette>False</RemapToRoomPalette>
+                              <ImportMethod>LeaveAsIs</ImportMethod>
+                              <ImportAlphaChannel>True</ImportAlphaChannel>
+                            </Source>
+                          </Sprite>
+                          <Sprite Slot="139" Width="50" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                            <Source>
+                              <FileName>Assets/Sprites/Characters/Rock Creatures/Rock_Creature Hopping/RC_Hopping1.png</FileName>
+                              <OffsetX>0</OffsetX>
+                              <OffsetY>0</OffsetY>
+                              <ImportHeight>50</ImportHeight>
+                              <ImportWidth>50</ImportWidth>
+                              <ImportAsTile>False</ImportAsTile>
+                              <Frame>0</Frame>
+                              <RemapToGamePalette>False</RemapToGamePalette>
+                              <RemapToRoomPalette>False</RemapToRoomPalette>
+                              <ImportMethod>LeaveAsIs</ImportMethod>
+                              <ImportAlphaChannel>True</ImportAlphaChannel>
+                            </Source>
+                          </Sprite>
+                        </Sprites>
+                      </SpriteFolder>
+                    </SubFolders>
                     <Sprites>
                       <Sprite Slot="51" Width="50" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                         <Source>
@@ -6903,6 +7448,131 @@ return
                       <Sprite Slot="118" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                         <Source>
                           <FileName>Assets/Sprites/VFX/Yell_C Rock Pieces Breaking/YCR_Pieces_Breaking5.png</FileName>
+                          <OffsetX>0</OffsetX>
+                          <OffsetY>0</OffsetY>
+                          <ImportHeight>32</ImportHeight>
+                          <ImportWidth>32</ImportWidth>
+                          <ImportAsTile>False</ImportAsTile>
+                          <Frame>0</Frame>
+                          <RemapToGamePalette>False</RemapToGamePalette>
+                          <RemapToRoomPalette>False</RemapToRoomPalette>
+                          <ImportMethod>LeaveAsIs</ImportMethod>
+                          <ImportAlphaChannel>True</ImportAlphaChannel>
+                        </Source>
+                      </Sprite>
+                    </Sprites>
+                  </SpriteFolder>
+                  <SpriteFolder Name="Gear Crafting VFX">
+                    <SubFolders />
+                    <Sprites>
+                      <Sprite Slot="119" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                        <Source>
+                          <FileName>Assets/Sprites/VFX/Gear or Crafting VFX/GCrafting_VFX0.png</FileName>
+                          <OffsetX>0</OffsetX>
+                          <OffsetY>0</OffsetY>
+                          <ImportHeight>32</ImportHeight>
+                          <ImportWidth>32</ImportWidth>
+                          <ImportAsTile>False</ImportAsTile>
+                          <Frame>0</Frame>
+                          <RemapToGamePalette>False</RemapToGamePalette>
+                          <RemapToRoomPalette>False</RemapToRoomPalette>
+                          <ImportMethod>LeaveAsIs</ImportMethod>
+                          <ImportAlphaChannel>True</ImportAlphaChannel>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="120" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                        <Source>
+                          <FileName>Assets/Sprites/VFX/Gear or Crafting VFX/GCrafting_VFX1.png</FileName>
+                          <OffsetX>0</OffsetX>
+                          <OffsetY>0</OffsetY>
+                          <ImportHeight>32</ImportHeight>
+                          <ImportWidth>32</ImportWidth>
+                          <ImportAsTile>False</ImportAsTile>
+                          <Frame>0</Frame>
+                          <RemapToGamePalette>False</RemapToGamePalette>
+                          <RemapToRoomPalette>False</RemapToRoomPalette>
+                          <ImportMethod>LeaveAsIs</ImportMethod>
+                          <ImportAlphaChannel>True</ImportAlphaChannel>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="121" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                        <Source>
+                          <FileName>Assets/Sprites/VFX/Gear or Crafting VFX/GCrafting_VFX2.png</FileName>
+                          <OffsetX>0</OffsetX>
+                          <OffsetY>0</OffsetY>
+                          <ImportHeight>32</ImportHeight>
+                          <ImportWidth>32</ImportWidth>
+                          <ImportAsTile>False</ImportAsTile>
+                          <Frame>0</Frame>
+                          <RemapToGamePalette>False</RemapToGamePalette>
+                          <RemapToRoomPalette>False</RemapToRoomPalette>
+                          <ImportMethod>LeaveAsIs</ImportMethod>
+                          <ImportAlphaChannel>True</ImportAlphaChannel>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="122" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                        <Source>
+                          <FileName>Assets/Sprites/VFX/Gear or Crafting VFX/GCrafting_VFX3.png</FileName>
+                          <OffsetX>0</OffsetX>
+                          <OffsetY>0</OffsetY>
+                          <ImportHeight>32</ImportHeight>
+                          <ImportWidth>32</ImportWidth>
+                          <ImportAsTile>False</ImportAsTile>
+                          <Frame>0</Frame>
+                          <RemapToGamePalette>False</RemapToGamePalette>
+                          <RemapToRoomPalette>False</RemapToRoomPalette>
+                          <ImportMethod>LeaveAsIs</ImportMethod>
+                          <ImportAlphaChannel>True</ImportAlphaChannel>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="123" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                        <Source>
+                          <FileName>Assets/Sprites/VFX/Gear or Crafting VFX/GCrafting_VFX4.png</FileName>
+                          <OffsetX>0</OffsetX>
+                          <OffsetY>0</OffsetY>
+                          <ImportHeight>32</ImportHeight>
+                          <ImportWidth>32</ImportWidth>
+                          <ImportAsTile>False</ImportAsTile>
+                          <Frame>0</Frame>
+                          <RemapToGamePalette>False</RemapToGamePalette>
+                          <RemapToRoomPalette>False</RemapToRoomPalette>
+                          <ImportMethod>LeaveAsIs</ImportMethod>
+                          <ImportAlphaChannel>True</ImportAlphaChannel>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="124" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                        <Source>
+                          <FileName>Assets/Sprites/VFX/Gear or Crafting VFX/GCrafting_VFX5.png</FileName>
+                          <OffsetX>0</OffsetX>
+                          <OffsetY>0</OffsetY>
+                          <ImportHeight>32</ImportHeight>
+                          <ImportWidth>32</ImportWidth>
+                          <ImportAsTile>False</ImportAsTile>
+                          <Frame>0</Frame>
+                          <RemapToGamePalette>False</RemapToGamePalette>
+                          <RemapToRoomPalette>False</RemapToRoomPalette>
+                          <ImportMethod>LeaveAsIs</ImportMethod>
+                          <ImportAlphaChannel>True</ImportAlphaChannel>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="125" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                        <Source>
+                          <FileName>Assets/Sprites/VFX/Gear or Crafting VFX/GCrafting_VFX6.png</FileName>
+                          <OffsetX>0</OffsetX>
+                          <OffsetY>0</OffsetY>
+                          <ImportHeight>32</ImportHeight>
+                          <ImportWidth>32</ImportWidth>
+                          <ImportAsTile>False</ImportAsTile>
+                          <Frame>0</Frame>
+                          <RemapToGamePalette>False</RemapToGamePalette>
+                          <RemapToRoomPalette>False</RemapToRoomPalette>
+                          <ImportMethod>LeaveAsIs</ImportMethod>
+                          <ImportAlphaChannel>True</ImportAlphaChannel>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="126" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                        <Source>
+                          <FileName>Assets/Sprites/VFX/Gear or Crafting VFX/GCrafting_VFX7.png</FileName>
                           <OffsetX>0</OffsetX>
                           <OffsetY>0</OffsetY>
                           <ImportHeight>32</ImportHeight>
@@ -7586,6 +8256,20 @@ return
                         <Image>51</Image>
                         <Sound>0</Sound>
                       </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>136</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>2</ID>
+                        <Image>137</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
                     </Frames>
                   </Loop>
                   <Loop>
@@ -7597,6 +8281,20 @@ return
                         <Flipped>False</Flipped>
                         <ID>0</ID>
                         <Image>51</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>136</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>2</ID>
+                        <Image>137</Image>
                         <Sound>0</Sound>
                       </ViewFrame>
                     </Frames>
@@ -7612,6 +8310,20 @@ return
                         <Image>51</Image>
                         <Sound>0</Sound>
                       </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>136</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>2</ID>
+                        <Image>137</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
                     </Frames>
                   </Loop>
                   <Loop>
@@ -7623,6 +8335,254 @@ return
                         <Flipped>False</Flipped>
                         <ID>0</ID>
                         <Image>51</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>136</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>2</ID>
+                        <Image>137</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+              <View>
+                <ID>18</ID>
+                <Name>VRC01_Crafting</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>127</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>128</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>2</ID>
+                        <Image>129</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>3</ID>
+                        <Image>130</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>4</ID>
+                        <Image>131</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>5</ID>
+                        <Image>132</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>6</ID>
+                        <Image>133</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>7</ID>
+                        <Image>134</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+              <View>
+                <ID>19</ID>
+                <Name>VRC01_WalkALT</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>51</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>136</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>2</ID>
+                        <Image>137</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>1</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>51</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>136</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>2</ID>
+                        <Image>137</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>2</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>51</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>136</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>2</ID>
+                        <Image>137</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>3</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>51</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>136</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>2</ID>
+                        <Image>137</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+              <View>
+                <ID>20</ID>
+                <Name>VRC01_Talking</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>51</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>137</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+              <View>
+                <ID>21</ID>
+                <Name>VRC01_Hopping</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>138</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>139</Image>
                         <Sound>0</Sound>
                       </ViewFrame>
                     </Frames>
@@ -7743,6 +8703,74 @@ return
                         <Flipped>False</Flipped>
                         <ID>5</ID>
                         <Image>118</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+              <View>
+                <ID>17</ID>
+                <Name>GCrafting_VFX</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>119</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>120</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>2</ID>
+                        <Image>121</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>3</ID>
+                        <Image>122</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>4</ID>
+                        <Image>123</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>5</ID>
+                        <Image>124</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>6</ID>
+                        <Image>125</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>7</ID>
+                        <Image>126</Image>
                         <Sound>0</Sound>
                       </ViewFrame>
                     </Frames>
@@ -8794,6 +9822,19 @@ See KeyboardMovement.txt for details.
                     <Type>3</Type>
                     <FileLastModifiedDate>2022-07-10 21:32:32Z</FileLastModifiedDate>
                   </AudioClip>
+                  <AudioClip>
+                    <BundlingType>InGameEXE</BundlingType>
+                    <DefaultPriority>Inherit</DefaultPriority>
+                    <DefaultRepeat>Inherit</DefaultRepeat>
+                    <DefaultVolume>-1</DefaultVolume>
+                    <FileType>OGG</FileType>
+                    <ID>23</ID>
+                    <Index>30</Index>
+                    <ScriptName>aMagical_Sparkle</ScriptName>
+                    <SourceFileName xml:space="preserve">Assets/Audio/SFX/Magical Sparkle.ogg</SourceFileName>
+                    <Type>3</Type>
+                    <FileLastModifiedDate>2024-11-03 02:58:41Z</FileLastModifiedDate>
+                  </AudioClip>
                 </AudioClips>
                 <AudioClipFolder>
                   <DefaultBundlingType>InGameEXE</DefaultBundlingType>
@@ -8870,6 +9911,32 @@ See KeyboardMovement.txt for details.
                     <SourceFileName>Assets/Sprites/ElectricalChord/electriczap.wav</SourceFileName>
                     <Type>3</Type>
                     <FileLastModifiedDate>2024-09-11 14:53:45Z</FileLastModifiedDate>
+                  </AudioClip>
+                  <AudioClip>
+                    <BundlingType>InGameEXE</BundlingType>
+                    <DefaultPriority>Inherit</DefaultPriority>
+                    <DefaultRepeat>Inherit</DefaultRepeat>
+                    <DefaultVolume>-1</DefaultVolume>
+                    <FileType>OGG</FileType>
+                    <ID>21</ID>
+                    <Index>26</Index>
+                    <ScriptName>aWorkbench_Crafting</ScriptName>
+                    <SourceFileName xml:space="preserve">Assets/Audio/SFX/Workbench Crafting.ogg</SourceFileName>
+                    <Type>3</Type>
+                    <FileLastModifiedDate>2024-11-03 02:19:48Z</FileLastModifiedDate>
+                  </AudioClip>
+                  <AudioClip>
+                    <BundlingType>InGameEXE</BundlingType>
+                    <DefaultPriority>Inherit</DefaultPriority>
+                    <DefaultRepeat>Inherit</DefaultRepeat>
+                    <DefaultVolume>-1</DefaultVolume>
+                    <FileType>OGG</FileType>
+                    <ID>22</ID>
+                    <Index>29</Index>
+                    <ScriptName>aStick_Snap1_Louder</ScriptName>
+                    <SourceFileName xml:space="preserve">Assets/Audio/SFX/Stick Snap1 (Louder).ogg</SourceFileName>
+                    <Type>3</Type>
+                    <FileLastModifiedDate>2024-11-03 02:23:25Z</FileLastModifiedDate>
                   </AudioClip>
                 </AudioClips>
                 <AudioClipFolder>
