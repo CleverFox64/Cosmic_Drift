@@ -16,3 +16,6 @@ import function Emma_Talking_Start();
 // ------------ (Dry Planet ~ Charcters Talking) ------------
 import function RC01_Talking_Start();
 import function RC_Merchant_Talking_Start();
+
+// ==================== (Title Screen ~ Other GUI Visibility) ==================== 
+//import function TitleScreen_Other_GUI_Visibility();
