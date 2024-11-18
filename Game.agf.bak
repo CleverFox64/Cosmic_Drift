@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>30</AudioIndexer>
+      <AudioIndexer>31</AudioIndexer>
       <AutoMoveInWalkMode>True</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BuildTargets xml:space="preserve">Windows, Web</BuildTargets>
@@ -2232,6 +2232,24 @@
                 <Width>88</Width>
                 <ZOrder>2</ZOrder>
               </GUIButton>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>12</Height>
+                <ID>3</ID>
+                <Left>50</Left>
+                <Locked>False</Locked>
+                <Name>Label1</Name>
+                <Text xml:space="preserve">Game Created by James Branford</Text>
+                <TextAlignment>Left</TextAlignment>
+                <TextColor>31423</TextColor>
+                <Top>186</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>220</Width>
+                <ZOrder>3</ZOrder>
+              </GUILabel>
             </Controls>
           </GUIMain>
         </GUIs>
@@ -10844,7 +10862,21 @@ See KeyboardMovement.txt for details.
               </AudioClipFolder>
               <AudioClipFolder Name="Space">
                 <SubFolders />
-                <AudioClips />
+                <AudioClips>
+                  <AudioClip>
+                    <BundlingType>InSeparateVOX</BundlingType>
+                    <DefaultPriority>Inherit</DefaultPriority>
+                    <DefaultRepeat>Inherit</DefaultRepeat>
+                    <DefaultVolume>-1</DefaultVolume>
+                    <FileType>OGG</FileType>
+                    <ID>24</ID>
+                    <Index>31</Index>
+                    <ScriptName>aCinematic_Space_Drone</ScriptName>
+                    <SourceFileName xml:space="preserve">Assets/Audio/Background Music/Space/Ogg/Cinematic_Space_Drone.ogg</SourceFileName>
+                    <Type>2</Type>
+                    <FileLastModifiedDate>2024-11-18 21:27:21Z</FileLastModifiedDate>
+                  </AudioClip>
+                </AudioClips>
                 <AudioClipFolder>
                   <DefaultBundlingType>InSeparateVOX</DefaultBundlingType>
                   <DefaultPriority>Inherit</DefaultPriority>
