@@ -2235,19 +2235,19 @@
               <GUILabel>
                 <Clickable>True</Clickable>
                 <Enabled>True</Enabled>
-                <Font>0</Font>
+                <Font>1</Font>
                 <Height>12</Height>
                 <ID>3</ID>
-                <Left>50</Left>
+                <Left>65</Left>
                 <Locked>False</Locked>
                 <Name>Label1</Name>
                 <Text xml:space="preserve">Game Created by James Branford</Text>
                 <TextAlignment>Left</TextAlignment>
                 <TextColor>31423</TextColor>
-                <Top>186</Top>
+                <Top>190</Top>
                 <Translated>True</Translated>
                 <Visible>True</Visible>
-                <Width>220</Width>
+                <Width>190</Width>
                 <ZOrder>3</ZOrder>
               </GUILabel>
             </Controls>
@@ -8753,6 +8753,21 @@ return
                   <Sprite Slot="204" Width="320" Height="200" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                     <Source>
                       <FileName>Assets/Backgrounds/Title Screen/Title Screen (w Button Guide).png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>200</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="211" Width="320" Height="200" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName>Assets/Backgrounds/Title Screen/Title Screen2.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>200</ImportHeight>
