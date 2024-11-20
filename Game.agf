@@ -2256,6 +2256,27 @@
               </GUILabel>
             </Controls>
           </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <BackgroundColor>0</BackgroundColor>
+              <BackgroundImage>214</BackgroundImage>
+              <BorderColor>0</BorderColor>
+              <Clickable>False</Clickable>
+              <Height>200</Height>
+              <ID>10</ID>
+              <Left>0</Left>
+              <Name>gCutscenesBars</Name>
+              <OnClick />
+              <PopupStyle>Normal</PopupStyle>
+              <PopupYPos>0</PopupYPos>
+              <Top>0</Top>
+              <Transparency>0</Transparency>
+              <Visible>False</Visible>
+              <Width>320</Width>
+              <ZOrder>0</ZOrder>
+            </NormalGUI>
+            <Controls />
+          </GUIMain>
         </GUIs>
       </GUIFolder>
     </GUIs>
@@ -6392,6 +6413,26 @@ return
                       </Sprite>
                     </Sprites>
                   </SpriteFolder>
+                  <SpriteFolder Name="Cutscenes Stuff">
+                    <SubFolders />
+                    <Sprites>
+                      <Sprite Slot="214" Width="320" Height="200" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                        <Source>
+                          <FileName>Assets/Sprites/Cutscenes Stuff/Cutscenes Bars02.png</FileName>
+                          <OffsetX>0</OffsetX>
+                          <OffsetY>0</OffsetY>
+                          <ImportHeight>200</ImportHeight>
+                          <ImportWidth>320</ImportWidth>
+                          <ImportAsTile>False</ImportAsTile>
+                          <Frame>0</Frame>
+                          <RemapToGamePalette>False</RemapToGamePalette>
+                          <RemapToRoomPalette>False</RemapToRoomPalette>
+                          <ImportMethod>LeaveAsIs</ImportMethod>
+                          <ImportAlphaChannel>True</ImportAlphaChannel>
+                        </Source>
+                      </Sprite>
+                    </Sprites>
+                  </SpriteFolder>
                 </SubFolders>
                 <Sprites>
                   <Sprite Slot="2160" Width="71" Height="19" ColorDepth="32" Resolution="Real" AlphaChannel="True">
@@ -8357,6 +8398,41 @@ return
                           <OffsetY>0</OffsetY>
                           <ImportHeight>50</ImportHeight>
                           <ImportWidth>60</ImportWidth>
+                          <ImportAsTile>False</ImportAsTile>
+                          <Frame>0</Frame>
+                          <RemapToGamePalette>False</RemapToGamePalette>
+                          <RemapToRoomPalette>False</RemapToRoomPalette>
+                          <ImportMethod>LeaveAsIs</ImportMethod>
+                          <ImportAlphaChannel>True</ImportAlphaChannel>
+                        </Source>
+                      </Sprite>
+                    </Sprites>
+                  </SpriteFolder>
+                  <SpriteFolder Name="Tint Screens">
+                    <SubFolders />
+                    <Sprites>
+                      <Sprite Slot="212" Width="320" Height="200" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                        <Source>
+                          <FileName>Assets/Sprites/Objects/Screen Tint/Screen Tint ~ Red.png</FileName>
+                          <OffsetX>0</OffsetX>
+                          <OffsetY>0</OffsetY>
+                          <ImportHeight>200</ImportHeight>
+                          <ImportWidth>320</ImportWidth>
+                          <ImportAsTile>False</ImportAsTile>
+                          <Frame>0</Frame>
+                          <RemapToGamePalette>False</RemapToGamePalette>
+                          <RemapToRoomPalette>False</RemapToRoomPalette>
+                          <ImportMethod>LeaveAsIs</ImportMethod>
+                          <ImportAlphaChannel>True</ImportAlphaChannel>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="213" Width="494" Height="202" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                        <Source>
+                          <FileName>Assets/Sprites/Objects/Screen Tint/Screen Tint ~ Red2.png</FileName>
+                          <OffsetX>0</OffsetX>
+                          <OffsetY>0</OffsetY>
+                          <ImportHeight>202</ImportHeight>
+                          <ImportWidth>494</ImportWidth>
                           <ImportAsTile>False</ImportAsTile>
                           <Frame>0</Frame>
                           <RemapToGamePalette>False</RemapToGamePalette>
