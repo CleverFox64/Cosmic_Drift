@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>31</AudioIndexer>
+      <AudioIndexer>33</AudioIndexer>
       <AutoMoveInWalkMode>True</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BuildTargets xml:space="preserve">Windows, Web</BuildTargets>
@@ -675,6 +675,10 @@
               <UnloadedRoom>
                 <Description xml:space="preserve">Spaceship Cockpit</Description>
                 <Number>4</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description xml:space="preserve">Spaceship Cockpit Damage</Description>
+                <Number>13</Number>
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
@@ -11274,6 +11278,44 @@ See KeyboardMovement.txt for details.
                         <SourceFileName xml:space="preserve">Assets/Audio/SFX/Sci-Fi Chimes/Ogg/Sci-Fi Mechanical Bling.ogg</SourceFileName>
                         <Type>3</Type>
                         <FileLastModifiedDate>2024-10-07 06:16:05Z</FileLastModifiedDate>
+                      </AudioClip>
+                    </AudioClips>
+                    <AudioClipFolder>
+                      <DefaultBundlingType>InGameEXE</DefaultBundlingType>
+                      <DefaultPriority>Inherit</DefaultPriority>
+                      <DefaultRepeat>Inherit</DefaultRepeat>
+                      <DefaultType>3</DefaultType>
+                      <DefaultVolume>100</DefaultVolume>
+                    </AudioClipFolder>
+                  </AudioClipFolder>
+                  <AudioClipFolder Name="SFX">
+                    <SubFolders />
+                    <AudioClips>
+                      <AudioClip>
+                        <BundlingType>InGameEXE</BundlingType>
+                        <DefaultPriority>Inherit</DefaultPriority>
+                        <DefaultRepeat>Inherit</DefaultRepeat>
+                        <DefaultVolume>-1</DefaultVolume>
+                        <FileType>OGG</FileType>
+                        <ID>25</ID>
+                        <Index>32</Index>
+                        <ScriptName>aSci_Fi_Chrasing_SFX</ScriptName>
+                        <SourceFileName>Assets/Audio/SFX/Sci-Fi_Chrasing_SFX.ogg</SourceFileName>
+                        <Type>3</Type>
+                        <FileLastModifiedDate>2024-11-20 16:44:08Z</FileLastModifiedDate>
+                      </AudioClip>
+                      <AudioClip>
+                        <BundlingType>InGameEXE</BundlingType>
+                        <DefaultPriority>Inherit</DefaultPriority>
+                        <DefaultRepeat>Inherit</DefaultRepeat>
+                        <DefaultVolume>-1</DefaultVolume>
+                        <FileType>OGG</FileType>
+                        <ID>26</ID>
+                        <Index>33</Index>
+                        <ScriptName>aSci_Fi_Alarm</ScriptName>
+                        <SourceFileName>Assets/Audio/SFX/Sci-Fi-Alarm.ogg</SourceFileName>
+                        <Type>3</Type>
+                        <FileLastModifiedDate>2024-11-20 16:43:55Z</FileLastModifiedDate>
                       </AudioClip>
                     </AudioClips>
                     <AudioClipFolder>
