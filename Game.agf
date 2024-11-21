@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>33</AudioIndexer>
+      <AudioIndexer>36</AudioIndexer>
       <AutoMoveInWalkMode>True</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BuildTargets xml:space="preserve">Windows, Web</BuildTargets>
@@ -3363,6 +3363,117 @@ return
   Joel_Talking_Start();
 cJoel: If you're looking for the others, two of them are in the cockpit, and Ana is in her room.
   cJoel.UnlockView();
+return
+]]></Script>
+                <DialogOptions />
+              </Dialog>
+              <Dialog>
+                <ID>11</ID>
+                <Name>dConcerning_Events02</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+//THIS Dailog is Not Used for Error reasons (EX: [Error (line 34): "Undefined token 'oScreenTint'] )
+
+  Ana_Talking_Start();
+Ana: Uh, what is happening!?
+  cAna.UnlockView();
+
+  Joel_Talking_Start();
+Joel: YEAH??? WHY HAS EVERYTHING TURNED DARK!?
+  cJoel.UnlockView();
+
+  Emma_Talking_Start();
+Emma: Have we entered a black hole?
+  cEmma.UnlockView();
+
+  Tyler_Talking_Start();
+Tyler: Judging how we are all fine now, I presume not
+  cTyler.UnlockView();
+  
+  Zeno_Talking_Start();
+Zeno: We would've been completely ripped apart otherwise...
+  cZeno.UnlockView();
+  
+  Ana_Talking_Start();
+Ana: How strange...
+  cAna.UnlockView();
+
+  Joel_Talking_Start();
+Joel: Why do I feel like somthing-
+  cJoel.UnlockView();
+  
+    //Big unseen object? crashes into the ship
+    aSci_Fi_Chrasing_SFX.Play();
+    ////oScreenTint.Visible = true;
+    //Screen.Tint(255, 0, 0);
+
+    Wait(130);
+    ////oScreenTint.Visible = false;
+    //SetAmbientTint(0, 0, 0);
+  
+  Zeno_Talking_Start();
+Zeno: We've been hit!
+  cZeno.UnlockView();
+
+  Tyler_Talking_Start();
+Tyler: WHAT!?
+  cTyler.UnlockView();
+
+  Emma_Talking_Start();
+Emma: But from where!?
+  cEmma.UnlockView();
+  
+  Zeno_Talking_Start();
+Zeno: I don't see anything on the control panel...?
+  cZeno.UnlockView();
+  
+    aSci_Fi_Chrasing_SFX.Play();
+    ////oScreenTint.Visible = true;
+    //SetAmbientTint(255, 0, 0);
+    
+    Wait(130);
+    ////oScreenTint.Visible = false;
+   // SetAmbientTint(0, 0, 0);
+
+  Zeno_Talking_Start();
+Zeno: DIRECT HIT!!!
+  cZeno.UnlockView();
+    
+    ////oScreenTint.Visible = true;
+    aSci_Fi_Alarm.Play();
+    Wait(300);
+
+  Joel_Talking_Start();
+Joel: THAT'S IT I'VE HAD ENOUGH!
+Joel: I'M OUT OF HERE! I'M OUT OF HERE!!!
+  cJoel.UnlockView();
+  
+  Emma_Talking_Start();
+Emma: RIGHT BEHIND YOU, JOEL!
+  cEmma.UnlockView();
+  
+    cEmma.Walk(294, 261, eNoBlock, eAnywhere);
+    cJoel.Walk(196, 261, eNoBlock, eAnywhere);
+
+  Ana_Talking_Start();
+Ana: What should we do, Zeno!?
+  cAna.UnlockView();
+  
+  Zeno_Talking_Start();
+Zeno: We should probably-
+  cZeno.UnlockView();
+  
+  Tyler_Talking_Start();
+Tyler: Head for the EASPCE SPACECRAFTS!!!
+  cTyler.UnlockView();
+
+  Zeno_Talking_Start();
+Zeno: Wai-
+  cZeno.UnlockView();
+
+    cTyler.Walk(294, 261, eBlock, eAnywhere);
+
 return
 ]]></Script>
                 <DialogOptions />
@@ -8441,6 +8552,21 @@ return
                           <ImportAlphaChannel>True</ImportAlphaChannel>
                         </Source>
                       </Sprite>
+                      <Sprite Slot="215" Width="554" Height="262" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                        <Source>
+                          <FileName>Assets/Sprites/Objects/Screen Tint/Screen Tint ~ Red3.png</FileName>
+                          <OffsetX>0</OffsetX>
+                          <OffsetY>0</OffsetY>
+                          <ImportHeight>262</ImportHeight>
+                          <ImportWidth>554</ImportWidth>
+                          <ImportAsTile>False</ImportAsTile>
+                          <Frame>0</Frame>
+                          <RemapToGamePalette>False</RemapToGamePalette>
+                          <RemapToRoomPalette>False</RemapToRoomPalette>
+                          <ImportMethod>LeaveAsIs</ImportMethod>
+                          <ImportAlphaChannel>True</ImportAlphaChannel>
+                        </Source>
+                      </Sprite>
                     </Sprites>
                   </SpriteFolder>
                 </SubFolders>
@@ -11389,9 +11515,48 @@ See KeyboardMovement.txt for details.
                         <ID>26</ID>
                         <Index>33</Index>
                         <ScriptName>aSci_Fi_Alarm</ScriptName>
-                        <SourceFileName>Assets/Audio/SFX/Sci-Fi-Alarm.ogg</SourceFileName>
+                        <SourceFileName xml:space="preserve">Assets/Audio/SFX/Sci-Fi-Alarm-[Booster Lv1].ogg</SourceFileName>
                         <Type>3</Type>
-                        <FileLastModifiedDate>2024-11-20 16:43:55Z</FileLastModifiedDate>
+                        <FileLastModifiedDate>2024-11-21 03:56:04Z</FileLastModifiedDate>
+                      </AudioClip>
+                      <AudioClip>
+                        <BundlingType>InGameEXE</BundlingType>
+                        <DefaultPriority>Inherit</DefaultPriority>
+                        <DefaultRepeat>Inherit</DefaultRepeat>
+                        <DefaultVolume>-1</DefaultVolume>
+                        <FileType>OGG</FileType>
+                        <ID>27</ID>
+                        <Index>34</Index>
+                        <ScriptName>aSci_Fi_Door_Slide_Open1</ScriptName>
+                        <SourceFileName xml:space="preserve">Assets/Audio/SFX/Sci-Fi Door Slide Open1.ogg</SourceFileName>
+                        <Type>3</Type>
+                        <FileLastModifiedDate>2024-11-21 05:48:08Z</FileLastModifiedDate>
+                      </AudioClip>
+                      <AudioClip>
+                        <BundlingType>InGameEXE</BundlingType>
+                        <DefaultPriority>Inherit</DefaultPriority>
+                        <DefaultRepeat>Inherit</DefaultRepeat>
+                        <DefaultVolume>-1</DefaultVolume>
+                        <FileType>OGG</FileType>
+                        <ID>28</ID>
+                        <Index>35</Index>
+                        <ScriptName>aSci_Fi_Door_Slide_Open2</ScriptName>
+                        <SourceFileName xml:space="preserve">Assets/Audio/SFX/Sci-Fi Door Slide Open2.ogg</SourceFileName>
+                        <Type>3</Type>
+                        <FileLastModifiedDate>2024-11-21 05:49:37Z</FileLastModifiedDate>
+                      </AudioClip>
+                      <AudioClip>
+                        <BundlingType>InGameEXE</BundlingType>
+                        <DefaultPriority>Inherit</DefaultPriority>
+                        <DefaultRepeat>Inherit</DefaultRepeat>
+                        <DefaultVolume>-1</DefaultVolume>
+                        <FileType>OGG</FileType>
+                        <ID>29</ID>
+                        <Index>36</Index>
+                        <ScriptName>aSci_Fi_Electronic_SFX</ScriptName>
+                        <SourceFileName xml:space="preserve">Assets/Audio/SFX/Sci-Fi Electronic SFX.ogg</SourceFileName>
+                        <Type>3</Type>
+                        <FileLastModifiedDate>2024-11-21 05:48:30Z</FileLastModifiedDate>
                       </AudioClip>
                     </AudioClips>
                     <AudioClipFolder>

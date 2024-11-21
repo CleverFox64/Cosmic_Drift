@@ -1,0 +1,84 @@
+if (Main_SS_Intro == 1)
+  {
+    //cZeno.Transparency = 100;
+  
+    cJoel.ChangeRoom(4,  294, 261, eDirectionUp);
+    cAna.ChangeRoom(4,  196, 261, eDirectionUp);
+    Wait(30);
+    
+    //278,  165
+    cJoel.Walk(273, 167, eNoBlock, eAnywhere);
+    cAna.Walk(210, 167, eBlock, eAnywhere);
+  
+    //=========================================================
+  
+    //dConcerning_Events02.Start(); or not
+  
+    cAna.Say("Uh, what is happening!?");
+    
+    cJoel.Say("YEAH??? WHY HAS EVERYTHING TURNED DARK!?");
+    
+    cEmma.Say("Have we entered a black hole?");
+    
+    cTyler.Say("Judging how we are all fine now, I presume not.");
+    
+    cZeno.Say("We would've been completely ripped apart otherwise...");
+    
+    cAna.Say("How strange...");
+    
+    cJoel.Say("Why do I feel like somthing-");
+    
+    //Big unseen object? crashes into the ship
+    aSci_Fi_Chrasing_SFX.Play();
+    oScreenTint.Visible = true;
+    //Screen.Tint(255, 0, 0);
+   
+    Wait(130);
+    oScreenTint.Visible = false;
+    //SetAmbientTint(0, 0, 0);
+    
+    cZeno.Say("We've been hit!");
+    
+    cTyler.Say("WHAT!?");
+    
+    cEmma.Say("But from where!?");
+    
+    cZeno.Say("(I don't see anything on the control panel...?)");
+    
+    aSci_Fi_Chrasing_SFX.Play();
+    oScreenTint.Visible = true;
+    //SetAmbientTint(255, 0, 0);
+    Wait(130);
+    oScreenTint.Visible = false;
+   // SetAmbientTint(0, 0, 0);
+    
+    cZeno.Say("DIRECT HIT!!!");
+    
+    oScreenTint.Visible = true;
+    aSci_Fi_Alarm.Play();
+    Wait(300);
+    
+    cJoel.Say("THAT'S IT I'VE HAD ENOUGH!");
+    cJoel.Say("I'M OUT OF HERE! I'M OUT OF HERE!!!");
+    cEmma.Say("RIGHT BEHIND YOU, JOEL!");
+    
+    cEmma.Walk(294, 261, eNoBlock, eAnywhere);
+    cJoel.Walk(196, 261, eNoBlock, eAnywhere);
+    
+    cAna.Say("What should we do, Zeno!?");
+    
+    cZeno.Say("We should probably-");
+    
+    cTyler.Say("Head for the EASPCE SPACECRAFTS!!!");
+    cZeno.Say("Wai-");
+    cTyler.Walk(294, 261, eBlock, eAnywhere);
+    
+    // Var Main_SS_Intro to -> 2
+    Main_SS_Intro += 1;
+    
+    
+    //Transtion back out the darkness
+    cZeno.ChangeRoom(12,  0,  0, eDirectionUp);
+    
+
+  }
