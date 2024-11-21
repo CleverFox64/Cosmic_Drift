@@ -8360,7 +8360,229 @@ return
                     </Sprites>
                   </SpriteFolder>
                   <SpriteFolder Name="Spacecraft">
-                    <SubFolders />
+                    <SubFolders>
+                      <SpriteFolder Name="Very Small SC">
+                        <SubFolders>
+                          <SpriteFolder Name="Joel">
+                            <SubFolders />
+                            <Sprites>
+                              <Sprite Slot="216" Width="24" Height="24" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                                <Source>
+                                  <FileName>Assets/Sprites/Objects/Spacecraft/Very Small Spacecrafts/Joel/VSSpacecraft ~ Joel01.png</FileName>
+                                  <OffsetX>0</OffsetX>
+                                  <OffsetY>0</OffsetY>
+                                  <ImportHeight>24</ImportHeight>
+                                  <ImportWidth>24</ImportWidth>
+                                  <ImportAsTile>False</ImportAsTile>
+                                  <Frame>0</Frame>
+                                  <RemapToGamePalette>False</RemapToGamePalette>
+                                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                                  <ImportMethod>LeaveAsIs</ImportMethod>
+                                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                                </Source>
+                              </Sprite>
+                              <Sprite Slot="217" Width="24" Height="24" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                                <Source>
+                                  <FileName>Assets/Sprites/Objects/Spacecraft/Very Small Spacecrafts/Joel/VSSpacecraft ~ Joel02.png</FileName>
+                                  <OffsetX>0</OffsetX>
+                                  <OffsetY>0</OffsetY>
+                                  <ImportHeight>24</ImportHeight>
+                                  <ImportWidth>24</ImportWidth>
+                                  <ImportAsTile>False</ImportAsTile>
+                                  <Frame>0</Frame>
+                                  <RemapToGamePalette>False</RemapToGamePalette>
+                                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                                  <ImportMethod>LeaveAsIs</ImportMethod>
+                                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                                </Source>
+                              </Sprite>
+                              <Sprite Slot="219" Width="24" Height="24" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                                <Source>
+                                  <FileName>Assets/Sprites/Objects/Spacecraft/Very Small Spacecrafts/Joel/VSSpacecraft ~ Joel03.png</FileName>
+                                  <OffsetX>0</OffsetX>
+                                  <OffsetY>0</OffsetY>
+                                  <ImportHeight>24</ImportHeight>
+                                  <ImportWidth>24</ImportWidth>
+                                  <ImportAsTile>False</ImportAsTile>
+                                  <Frame>0</Frame>
+                                  <RemapToGamePalette>False</RemapToGamePalette>
+                                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                                  <ImportMethod>LeaveAsIs</ImportMethod>
+                                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                                </Source>
+                              </Sprite>
+                            </Sprites>
+                          </SpriteFolder>
+                          <SpriteFolder Name="Tyler">
+                            <SubFolders />
+                            <Sprites>
+                              <Sprite Slot="220" Width="24" Height="24" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                                <Source>
+                                  <FileName>Assets/Sprites/Objects/Spacecraft/Very Small Spacecrafts/Tyler/VSSpacecraft ~ Tyler01.png</FileName>
+                                  <OffsetX>0</OffsetX>
+                                  <OffsetY>0</OffsetY>
+                                  <ImportHeight>24</ImportHeight>
+                                  <ImportWidth>24</ImportWidth>
+                                  <ImportAsTile>False</ImportAsTile>
+                                  <Frame>0</Frame>
+                                  <RemapToGamePalette>False</RemapToGamePalette>
+                                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                                  <ImportMethod>LeaveAsIs</ImportMethod>
+                                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                                </Source>
+                              </Sprite>
+                              <Sprite Slot="221" Width="24" Height="24" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                                <Source>
+                                  <FileName>Assets/Sprites/Objects/Spacecraft/Very Small Spacecrafts/Tyler/VSSpacecraft ~ Tyler02.png</FileName>
+                                  <OffsetX>0</OffsetX>
+                                  <OffsetY>0</OffsetY>
+                                  <ImportHeight>24</ImportHeight>
+                                  <ImportWidth>24</ImportWidth>
+                                  <ImportAsTile>False</ImportAsTile>
+                                  <Frame>0</Frame>
+                                  <RemapToGamePalette>False</RemapToGamePalette>
+                                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                                  <ImportMethod>LeaveAsIs</ImportMethod>
+                                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                                </Source>
+                              </Sprite>
+                              <Sprite Slot="222" Width="24" Height="24" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                                <Source>
+                                  <FileName>Assets/Sprites/Objects/Spacecraft/Very Small Spacecrafts/Tyler/VSSpacecraft ~ Tyler03.png</FileName>
+                                  <OffsetX>0</OffsetX>
+                                  <OffsetY>0</OffsetY>
+                                  <ImportHeight>24</ImportHeight>
+                                  <ImportWidth>24</ImportWidth>
+                                  <ImportAsTile>False</ImportAsTile>
+                                  <Frame>0</Frame>
+                                  <RemapToGamePalette>False</RemapToGamePalette>
+                                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                                  <ImportMethod>LeaveAsIs</ImportMethod>
+                                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                                </Source>
+                              </Sprite>
+                            </Sprites>
+                          </SpriteFolder>
+                          <SpriteFolder Name="Ana">
+                            <SubFolders />
+                            <Sprites>
+                              <Sprite Slot="223" Width="24" Height="24" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                                <Source>
+                                  <FileName>Assets/Sprites/Objects/Spacecraft/Very Small Spacecrafts/Ana/VSSpacecraft ~ Ana01.png</FileName>
+                                  <OffsetX>0</OffsetX>
+                                  <OffsetY>0</OffsetY>
+                                  <ImportHeight>24</ImportHeight>
+                                  <ImportWidth>24</ImportWidth>
+                                  <ImportAsTile>False</ImportAsTile>
+                                  <Frame>0</Frame>
+                                  <RemapToGamePalette>False</RemapToGamePalette>
+                                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                                  <ImportMethod>LeaveAsIs</ImportMethod>
+                                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                                </Source>
+                              </Sprite>
+                              <Sprite Slot="224" Width="24" Height="24" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                                <Source>
+                                  <FileName>Assets/Sprites/Objects/Spacecraft/Very Small Spacecrafts/Ana/VSSpacecraft ~ Ana02.png</FileName>
+                                  <OffsetX>0</OffsetX>
+                                  <OffsetY>0</OffsetY>
+                                  <ImportHeight>24</ImportHeight>
+                                  <ImportWidth>24</ImportWidth>
+                                  <ImportAsTile>False</ImportAsTile>
+                                  <Frame>0</Frame>
+                                  <RemapToGamePalette>False</RemapToGamePalette>
+                                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                                  <ImportMethod>LeaveAsIs</ImportMethod>
+                                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                                </Source>
+                              </Sprite>
+                              <Sprite Slot="225" Width="24" Height="24" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                                <Source>
+                                  <FileName>Assets/Sprites/Objects/Spacecraft/Very Small Spacecrafts/Ana/VSSpacecraft ~ Ana03.png</FileName>
+                                  <OffsetX>0</OffsetX>
+                                  <OffsetY>0</OffsetY>
+                                  <ImportHeight>24</ImportHeight>
+                                  <ImportWidth>24</ImportWidth>
+                                  <ImportAsTile>False</ImportAsTile>
+                                  <Frame>0</Frame>
+                                  <RemapToGamePalette>False</RemapToGamePalette>
+                                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                                  <ImportMethod>LeaveAsIs</ImportMethod>
+                                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                                </Source>
+                              </Sprite>
+                            </Sprites>
+                          </SpriteFolder>
+                          <SpriteFolder Name="Emma">
+                            <SubFolders />
+                            <Sprites>
+                              <Sprite Slot="226" Width="24" Height="24" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                                <Source>
+                                  <FileName>Assets/Sprites/Objects/Spacecraft/Very Small Spacecrafts/Emma/VSSpacecraft ~ Emma01.png</FileName>
+                                  <OffsetX>0</OffsetX>
+                                  <OffsetY>0</OffsetY>
+                                  <ImportHeight>24</ImportHeight>
+                                  <ImportWidth>24</ImportWidth>
+                                  <ImportAsTile>False</ImportAsTile>
+                                  <Frame>0</Frame>
+                                  <RemapToGamePalette>False</RemapToGamePalette>
+                                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                                  <ImportMethod>LeaveAsIs</ImportMethod>
+                                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                                </Source>
+                              </Sprite>
+                              <Sprite Slot="227" Width="24" Height="24" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                                <Source>
+                                  <FileName>Assets/Sprites/Objects/Spacecraft/Very Small Spacecrafts/Emma/VSSpacecraft ~ Emma02.png</FileName>
+                                  <OffsetX>0</OffsetX>
+                                  <OffsetY>0</OffsetY>
+                                  <ImportHeight>24</ImportHeight>
+                                  <ImportWidth>24</ImportWidth>
+                                  <ImportAsTile>False</ImportAsTile>
+                                  <Frame>0</Frame>
+                                  <RemapToGamePalette>False</RemapToGamePalette>
+                                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                                  <ImportMethod>LeaveAsIs</ImportMethod>
+                                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                                </Source>
+                              </Sprite>
+                              <Sprite Slot="228" Width="24" Height="24" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                                <Source>
+                                  <FileName>Assets/Sprites/Objects/Spacecraft/Very Small Spacecrafts/Emma/VSSpacecraft ~ Emma03.png</FileName>
+                                  <OffsetX>0</OffsetX>
+                                  <OffsetY>0</OffsetY>
+                                  <ImportHeight>24</ImportHeight>
+                                  <ImportWidth>24</ImportWidth>
+                                  <ImportAsTile>False</ImportAsTile>
+                                  <Frame>0</Frame>
+                                  <RemapToGamePalette>False</RemapToGamePalette>
+                                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                                  <ImportMethod>LeaveAsIs</ImportMethod>
+                                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                                </Source>
+                              </Sprite>
+                            </Sprites>
+                          </SpriteFolder>
+                        </SubFolders>
+                        <Sprites>
+                          <Sprite Slot="218" Width="24" Height="24" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                            <Source>
+                              <FileName>Assets/Sprites/Objects/Spacecraft/Very Small Spacecrafts/Joel/VSSpacecraft ~ Joel03.png</FileName>
+                              <OffsetX>0</OffsetX>
+                              <OffsetY>0</OffsetY>
+                              <ImportHeight>24</ImportHeight>
+                              <ImportWidth>24</ImportWidth>
+                              <ImportAsTile>False</ImportAsTile>
+                              <Frame>0</Frame>
+                              <RemapToGamePalette>False</RemapToGamePalette>
+                              <RemapToRoomPalette>False</RemapToRoomPalette>
+                              <ImportMethod>LeaveAsIs</ImportMethod>
+                              <ImportAlphaChannel>True</ImportAlphaChannel>
+                            </Source>
+                          </Sprite>
+                        </Sprites>
+                      </SpriteFolder>
+                    </SubFolders>
                     <Sprites>
                       <Sprite Slot="52" Width="88" Height="89" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                         <Source>
@@ -10964,6 +11186,143 @@ return
                         <Flipped>False</Flipped>
                         <ID>2</ID>
                         <Image>149</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+            </Views>
+          </ViewFolder>
+          <ViewFolder Name="Spacecrafts">
+            <SubFolders />
+            <Views>
+              <View>
+                <ID>23</ID>
+                <Name>TinySCrafts_Joel</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>216</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>217</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>2</ID>
+                        <Image>219</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+              <View>
+                <ID>24</ID>
+                <Name>TinySCrafts_Tyler</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>220</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>221</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>2</ID>
+                        <Image>222</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+              <View>
+                <ID>25</ID>
+                <Name>TinySCrafts_Ana</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>223</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>224</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>2</ID>
+                        <Image>225</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+              <View>
+                <ID>26</ID>
+                <Name>TinySCrafts_Emma</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>226</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>227</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>2</ID>
+                        <Image>228</Image>
                         <Sound>0</Sound>
                       </ViewFrame>
                     </Frames>
