@@ -3554,7 +3554,7 @@ return
           </DialogFolder>
           <DialogFolder Name="Dry Planet">
             <SubFolders>
-              <DialogFolder Name="Dry Planet ~ Center Location">
+              <DialogFolder Name="Dry Planet ~ Center Location (Rocky Roll-an)">
                 <SubFolders />
                 <Dialogs>
                   <Dialog>
@@ -3629,8 +3629,8 @@ cJoel: Any suggestions?
   cJoel.UnlockView();
   
   RC01_Talking_Start();
-cRockCreature01: Well, you're currently located at the center of the planet.
-cRockCreature01: So... maybe go Southwest from here? I think we have a couple of lakes there.
+cRockCreature01: Well, you're currently located in our town, Rocky Roll-an.
+cRockCreature01: So... maybe go Southwest from here? To the "Ponds of Pureness." I think we have a couple of them there.
   cRockCreature01.UnlockView();
   
   Joel_Talking_Start();
@@ -3671,9 +3671,10 @@ cJoel: Where should I go again?
 
   RC01_Talking_Start();
 cRockCreature01: There are many different places you can go that will have water.
-cRockCreature01: Hmm... We're currently at the center of the planet...
+cRockCreature01: Hmm... We're currently at our town Rocky Roll-an...
 cRockCreature01: If I had to suggest a more specific location...
-cRockCreature01: I would say try going Southwest from here. There should be a couple of lakes there.
+cRockCreature01: I would say try going Southwest from here. To the "Ponds of Pureness."
+cRockCreature01: There should be a couple of ponds there.
   cRockCreature01.UnlockView();
   
 //Hint to travel though your ship
@@ -3752,9 +3753,29 @@ cRockCreature01: By chance, did the other individual tell you need a Yellow Citr
 cJoel: Why yes! I needed the stone to purify the water. The thing is, I don't have anything to get the stone.
   cJoel.UnlockView();
 
+//Start of Why "Ponds of Pureness"
   RC01_Talking_Start();
-cRockCreature01: Oh, I see. I may have something that could help you.
+cRockCreature01: Oh, I see. 
+cRockCreature01: Sometimes the ponds there the lquids needs to be puirfld.
+  cRockCreature01.UnlockView()
+  
+   Joel_Talking_Start();
+cJoel: Then why is it called "Ponds of Pureness?" 
+  cJoel.UnlockView();
+  
+  
+  
+  RC01_Talking_Start();
+cRockCreature01: Because some of the ponds there are usally purfiledz
+cRockCreature01: Plus it's really easy to purfild a amout of lquid from them.
   cRockCreature01.UnlockView();
+  
+cJoel: (...)
+
+    RC01_Talking_Start();
+cRockCreature01: Anyway, I may have something that could help you.
+  cRockCreature01.UnlockView();
+//End of Why "Ponds of Pureness"
 
   Joel_Talking_Start();
 cJoel: What would that be?
