@@ -2277,6 +2277,78 @@
             </NormalGUI>
             <Controls />
           </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <BackgroundColor>0</BackgroundColor>
+              <BackgroundImage>235</BackgroundImage>
+              <BorderColor>0</BorderColor>
+              <Clickable>True</Clickable>
+              <Height>89</Height>
+              <ID>11</ID>
+              <Left>58</Left>
+              <Name>gSkipIntroPopup</Name>
+              <OnClick />
+              <PopupStyle>PopupModal</PopupStyle>
+              <PopupYPos>0</PopupYPos>
+              <Top>68</Top>
+              <Transparency>0</Transparency>
+              <Visible>False</Visible>
+              <Width>205</Width>
+              <ZOrder>0</ZOrder>
+            </NormalGUI>
+            <Controls>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>37</Height>
+                <ID>0</ID>
+                <Image>156</Image>
+                <Left>44</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>152</MouseoverImage>
+                <Name>btnYes_SkipIntro</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnYes_SkipIntro_OnClick</OnClick>
+                <PushedImage>157</PushedImage>
+                <Text />
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>27</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>40</Width>
+                <ZOrder>0</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>37</Height>
+                <ID>1</ID>
+                <Image>154</Image>
+                <Left>120</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>153</MouseoverImage>
+                <Name>btnNO_DontSkipIntro</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnNO_DontSkipIntro_OnClick</OnClick>
+                <PushedImage>155</PushedImage>
+                <Text />
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>27</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>40</Width>
+                <ZOrder>1</ZOrder>
+              </GUIButton>
+            </Controls>
+          </GUIMain>
         </GUIs>
       </GUIFolder>
     </GUIs>
@@ -4376,6 +4448,11 @@ return
         <GlobalVariable>
           <DefaultValue>0</DefaultValue>
           <Name>TitleScreen</Name>
+          <Type>int</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <DefaultValue />
+          <Name>ZenoGoingBackToBed_SkipIntro</Name>
           <Type>int</Type>
         </GlobalVariable>
       </Variables>
@@ -6539,6 +6616,26 @@ return
                           <OffsetY>0</OffsetY>
                           <ImportHeight>200</ImportHeight>
                           <ImportWidth>320</ImportWidth>
+                          <ImportAsTile>False</ImportAsTile>
+                          <Frame>0</Frame>
+                          <RemapToGamePalette>False</RemapToGamePalette>
+                          <RemapToRoomPalette>False</RemapToRoomPalette>
+                          <ImportMethod>LeaveAsIs</ImportMethod>
+                          <ImportAlphaChannel>True</ImportAlphaChannel>
+                        </Source>
+                      </Sprite>
+                    </Sprites>
+                  </SpriteFolder>
+                  <SpriteFolder Name="Skip Intro Popup">
+                    <SubFolders />
+                    <Sprites>
+                      <Sprite Slot="235" Width="205" Height="130" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                        <Source>
+                          <FileName>Assets/Sprites/UI/Back to Bed (Skip Intro)/Back to Bed (Skip Intro).png</FileName>
+                          <OffsetX>0</OffsetX>
+                          <OffsetY>0</OffsetY>
+                          <ImportHeight>130</ImportHeight>
+                          <ImportWidth>205</ImportWidth>
                           <ImportAsTile>False</ImportAsTile>
                           <Frame>0</Frame>
                           <RemapToGamePalette>False</RemapToGamePalette>
