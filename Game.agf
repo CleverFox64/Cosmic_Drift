@@ -2887,7 +2887,7 @@
             <UseRoomAreaLighting>True</UseRoomAreaLighting>
             <UseRoomAreaScaling>True</UseRoomAreaScaling>
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">cTyler_Look</Event>
               <Event Index="1" />
               <Event Index="2">cTyler_Talk</Event>
               <Event Index="3" />
@@ -2929,7 +2929,7 @@
             <UseRoomAreaLighting>True</UseRoomAreaLighting>
             <UseRoomAreaScaling>True</UseRoomAreaScaling>
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">cAna_Look</Event>
               <Event Index="1" />
               <Event Index="2">cAna_Talk</Event>
               <Event Index="3" />
@@ -2971,7 +2971,7 @@
             <UseRoomAreaLighting>True</UseRoomAreaLighting>
             <UseRoomAreaScaling>True</UseRoomAreaScaling>
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">cEmma_Look</Event>
               <Event Index="1" />
               <Event Index="2">cEmma_Talk</Event>
               <Event Index="3" />
@@ -3706,7 +3706,7 @@ stop
                       <DialogOption>
                         <ID>2</ID>
                         <Say>False</Say>
-                        <Show>True</Show>
+                        <Show>False</Show>
                         <Text>...</Text>
                       </DialogOption>
                       <DialogOption>
@@ -3756,8 +3756,8 @@ cJoel: Why yes! I needed the stone to purify the water. The thing is, I don't ha
 //Start of Why "Ponds of Pureness"
   RC01_Talking_Start();
 cRockCreature01: Oh, I see. 
-cRockCreature01: Sometimes the ponds there the lquids needs to be puirfld.
-  cRockCreature01.UnlockView()
+cRockCreature01: Sometimes, some of the ponds need to be purified.
+  cRockCreature01.UnlockView();
   
    Joel_Talking_Start();
 cJoel: Then why is it called "Ponds of Pureness?" 
@@ -3766,8 +3766,8 @@ cJoel: Then why is it called "Ponds of Pureness?"
   
   
   RC01_Talking_Start();
-cRockCreature01: Because some of the ponds there are usally purfiledz
-cRockCreature01: Plus it's really easy to purfild a amout of lquid from them.
+cRockCreature01: Because some of the ponds there are usually purified.
+cRockCreature01: Plus, it's really easy to purify an amount of liquid from them.
   cRockCreature01.UnlockView();
   
 cJoel: (...)
@@ -3810,7 +3810,7 @@ return
                   </Dialog>
                 </Dialogs>
               </DialogFolder>
-              <DialogFolder Name="Dry Planet ~ SW Location">
+              <DialogFolder Name="Dry Planet ~ SW Location (Ponds of Pureness)">
                 <SubFolders />
                 <Dialogs>
                   <Dialog>
@@ -3838,8 +3838,10 @@ cJoel: How do I purify the liquid again?
   cJoel.UnlockView();
 
   RC_Merchant_Talking_Start();
-cRC_Merchant: You need to find Yellow Citrc Stone.
-cRC_Merchant: There usually located around dark purple areas on the planet.
+cRC_Merchant: You need to find a Yellow Citrc Stone.
+cRC_Merchant: They're usually located around big dark purple areas on the planet.
+cRC_Merchant: They're called the "Violet Veils."
+
 cRC_Merchant: They're engraved in rocks near there.
 cRC_Merchant: You might need something that can break it to get it.
   cRC_Merchant.UnlockView();
@@ -3872,8 +3874,8 @@ stop
                       </DialogOption>
                       <DialogOption>
                         <ID>2</ID>
-                        <Say>True</Say>
-                        <Show>True</Show>
+                        <Say>False</Say>
+                        <Show>False</Show>
                         <Text>...</Text>
                       </DialogOption>
                       <DialogOption>
