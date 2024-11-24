@@ -2392,10 +2392,10 @@
                 <PlayerStartsWithItem>False</PlayerStartsWithItem>
                 <Properties />
                 <Interactions>
-                  <Event Index="0" />
+                  <Event Index="0">iStick_Look</Event>
                   <Event Index="1" />
                   <Event Index="2" />
-                  <Event Index="3" />
+                  <Event Index="3">iStick_UseInv</Event>
                   <Event Index="4" />
                 </Interactions>
               </InventoryItem>
@@ -2410,7 +2410,7 @@
                 <PlayerStartsWithItem>False</PlayerStartsWithItem>
                 <Properties />
                 <Interactions>
-                  <Event Index="0" />
+                  <Event Index="0">iYellowCitrcStone_Look</Event>
                   <Event Index="1" />
                   <Event Index="2" />
                   <Event Index="3">iYellowCitrcStone_UseInv</Event>
@@ -2428,10 +2428,10 @@
                 <PlayerStartsWithItem>False</PlayerStartsWithItem>
                 <Properties />
                 <Interactions>
-                  <Event Index="0" />
+                  <Event Index="0">iDryP_Hammer_Look</Event>
                   <Event Index="1" />
                   <Event Index="2" />
-                  <Event Index="3" />
+                  <Event Index="3">iDryP_Hammer_UseInv</Event>
                   <Event Index="4" />
                 </Interactions>
               </InventoryItem>
@@ -2446,10 +2446,10 @@
                 <PlayerStartsWithItem>False</PlayerStartsWithItem>
                 <Properties />
                 <Interactions>
-                  <Event Index="0" />
+                  <Event Index="0">iDryP_Rock_Look</Event>
                   <Event Index="1" />
                   <Event Index="2" />
-                  <Event Index="3" />
+                  <Event Index="3">iDryP_Rock_UseInv</Event>
                   <Event Index="4" />
                 </Interactions>
               </InventoryItem>
@@ -2464,10 +2464,10 @@
                 <PlayerStartsWithItem>False</PlayerStartsWithItem>
                 <Properties />
                 <Interactions>
-                  <Event Index="0" />
+                  <Event Index="0">iEmptyJug_Look</Event>
                   <Event Index="1" />
                   <Event Index="2" />
-                  <Event Index="3" />
+                  <Event Index="3">iEmptyJug_UseInv</Event>
                   <Event Index="4" />
                 </Interactions>
               </InventoryItem>
@@ -2482,7 +2482,7 @@
                 <PlayerStartsWithItem>False</PlayerStartsWithItem>
                 <Properties />
                 <Interactions>
-                  <Event Index="0" />
+                  <Event Index="0">iJugUnpurifiedWater_Look</Event>
                   <Event Index="1" />
                   <Event Index="2" />
                   <Event Index="3">iJugUnpurifiedWater_UseInv</Event>
@@ -2718,7 +2718,7 @@
                   <Event Index="0">cRockCreature01_Look</Event>
                   <Event Index="1" />
                   <Event Index="2">cRockCreature01_Talk</Event>
-                  <Event Index="3" />
+                  <Event Index="3">cRockCreature01_UseInv</Event>
                   <Event Index="4" />
                   <Event Index="5" />
                   <Event Index="6" />
@@ -2760,7 +2760,7 @@
                   <Event Index="0" />
                   <Event Index="1" />
                   <Event Index="2">cRC_Merchant_Talk</Event>
-                  <Event Index="3" />
+                  <Event Index="3">cRC_Merchant_UseInv</Event>
                   <Event Index="4" />
                   <Event Index="5" />
                   <Event Index="6" />
@@ -2848,7 +2848,7 @@
               <Event Index="0">cJoel_Look</Event>
               <Event Index="1" />
               <Event Index="2">cJoel_Talk</Event>
-              <Event Index="3" />
+              <Event Index="3">cJoel_UseInv</Event>
               <Event Index="4" />
               <Event Index="5" />
               <Event Index="6" />
@@ -3907,8 +3907,8 @@ cJoel: Yeah, I did, but I have no idea what to do with it
 
   RC_Merchant_Talking_Start();
 cRC_Merchant: It's quite simple. But let me tell you this first...
-cRC_Merchant: That stone is not going to be enough to purify a hole puddle. 
-cRC_Merchant: It's better if you scoop a certain amount of the liquid and then use it
+cRC_Merchant: That stone is not going to be enough to purify a whole pond. 
+cRC_Merchant: It's better if you scoop a certain amount of the liquid and then use it.
   cRC_Merchant.UnlockView();
 
   Joel_Talking_Start();
@@ -3979,6 +3979,56 @@ cJoel: Sounds simple enough. I'll give it a shot.
   ////Var Joel_Expedition to -> 6
   Joel_Expedition = 6;
   
+return
+]]></Script>
+                    <DialogOptions />
+                  </Dialog>
+                  <Dialog>
+                    <ID>12</ID>
+                    <Name>dLeaving_Dry_Planet</Name>
+                    <ShowTextParser>False</ShowTextParser>
+                    <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+  
+  RC_Merchant_Talking_Start();
+cRC_Merchant: Wait, where are you going? Sorry, I was dozing off again...
+cRC_Merchant: Did you purify the liquid already?
+  cRC_Merchant.UnlockView();
+  
+  Joel_Talking_Start();
+cJoel: I did and it worked!!
+  cJoel.UnlockView();
+  
+  
+cRC_Merchant: Awesome!
+
+cJoel: Yeah, but now I have to get going...
+
+cRC_Merchant: You're leaving already?
+
+cJoel: Yeah, unfortunately...
+cJoel: My whole group got separated when we were flying our main spaceship.
+cJoel: And I haven't received any single from them since we escaped in our spacecraft. 
+
+
+cRC_Merchant: Oh gosh, I'm sorry to hear that.
+
+cJoel: It's okay.
+
+cRC_Merchant: I wish I could do more but I'm just a traveling Merchant...
+
+cJoel: It's all right. My plan was to go back into space and head in their general direction when we got split up.
+
+cRC_Merchant: Well, I hope that works out for you.
+
+cJoel: Yeah me too...
+
+cJoel: Anyway, I should be going.
+
+cRC_Merchant: Have a safe trip.
+
+cJoel: I will.
+
 return
 ]]></Script>
                     <DialogOptions />
