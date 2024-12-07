@@ -1,1 +1,1 @@
-var gamefiles = ['audio.vox', 'Comic Drift.ags', 'acsetup.cfg'];
+var gamefiles = ['audio.vox', 'Cosmic Drift.ags', 'acsetup.cfg'];

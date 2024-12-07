@@ -38,8 +38,8 @@
       <EnforceObjectBasedScript>True</EnforceObjectBasedScript>
       <GUIAlphaStyle>MultiplyTranslucenceSrcBlend</GUIAlphaStyle>
       <GUIDAsString>{d8e8a6b0-2f65-4711-8d3a-0bfb9168936f}</GUIDAsString>
-      <GameFileName xml:space="preserve">Comic Drift</GameFileName>
-      <GameName xml:space="preserve">Comic Drift</GameName>
+      <GameFileName xml:space="preserve">Cosmic Drift</GameFileName>
+      <GameName xml:space="preserve">Cosmic Drift</GameName>
       <GameTextEncoding>utf-8</GameTextEncoding>
       <Genre>Adventure</Genre>
       <GlobalSpeechAnimationDelay>5</GlobalSpeechAnimationDelay>
@@ -62,7 +62,7 @@
       <RoomTransition>FadeOutAndIn</RoomTransition>
       <RunGameLoopsWhileDialogOptionsDisplayed>False</RunGameLoopsWhileDialogOptionsDisplayed>
       <SaveGameFileExtension />
-      <SaveGameFolderName xml:space="preserve">Comic Drift</SaveGameFolderName>
+      <SaveGameFolderName xml:space="preserve">Cosmic Drift</SaveGameFolderName>
       <SaveScreenshots>False</SaveScreenshots>
       <ScaleCharacterSpriteOffsets>True</ScaleCharacterSpriteOffsets>
       <ScaleMovementSpeedWithMaskResolution>False</ScaleMovementSpeedWithMaskResolution>
@@ -107,7 +107,7 @@
       <SoundCacheSize>32</SoundCacheSize>
       <SpriteCacheSize>128</SpriteCacheSize>
       <TextureCacheSize>128</TextureCacheSize>
-      <TitleText xml:space="preserve">Comic Drift Setup</TitleText>
+      <TitleText xml:space="preserve">Cosmic Drift Setup</TitleText>
       <TouchToMouseEmulation>OneFinger</TouchToMouseEmulation>
       <TouchToMouseMotionMode>Direct</TouchToMouseMotionMode>
       <Translation />
@@ -9859,6 +9859,21 @@ return
                   <Sprite Slot="211" Width="320" Height="200" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                     <Source>
                       <FileName>Assets/Backgrounds/Title Screen/Title Screen2.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>200</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="250" Width="320" Height="200" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName>Assets/Backgrounds/Title Screen/Title Screen3.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>200</ImportHeight>
